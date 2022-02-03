@@ -115,7 +115,7 @@ nav {
   border-radius: 0 50px 50px 0;
   background: linear-gradient(180deg, #FE1251 0%, #FF0045 100%);
   font-size: 36px;
-  font-weight: lighter;
+  font-weight: 300;
 }
 
 nav.col-3 {
@@ -130,21 +130,35 @@ nav.col-3 {
 
 
 hr {
-    margin: 0;
+    height: 2px !important;
+    margin: 0 0 2px 0;
+    color: #fff;
+    border-radius: 99px;
 }
 
-a {
+section div nav a {
     text-decoration: none;
     color: #fff;
     cursor: pointer;
     margin: 5px;
 }
 
-a:hover {
+section div nav a:hover {
     background-color: #FF557A;
     border-radius: 100px;
     color: #fff;
 }
+
+a.active {
+    font-size: 40px;
+    font-weight: bold;
+    background-color: #FF557A;
+    border-radius: 100px;
+}
+
+
+
+
 
 svg.big-nav-icon {
     height: 40px;
