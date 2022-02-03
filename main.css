@@ -123,26 +123,27 @@ nav.col-3 {
 }
 
 .nav-box {
-    padding: 0px 12px 12px 12px;
+    padding: 0px 12px 0px 12px;
 }
 
-.mini-nav {
-    margin: 0;
-    
-}
 
-.zzt {
-    height: fit-content;
-}
 
 hr {
     margin: 0;
 }
 
+svg {
+    /* height: 30px;
+    width: 30px; */
+}
+
+
+
+
 
 
 .img-gallery {
-    width: calc(100% + 72px);
+    width: calc(100% + 114px);
     height: 275px;
     object-fit: cover;
     margin-left: -60px;
