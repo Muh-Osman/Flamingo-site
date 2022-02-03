@@ -115,7 +115,7 @@ nav {
   border-radius: 0 50px 50px 0;
   background: linear-gradient(180deg, #FE1251 0%, #FF0045 100%);
   font-size: 35px;
-  text-align: left;
+  
 }
 
 nav.col-3 {
@@ -131,6 +131,11 @@ nav.col-3 {
 
 hr {
     margin: 0;
+}
+
+a {
+    text-decoration: none;
+    
 }
 
 svg.big-nav-icon {
