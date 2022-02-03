@@ -8,8 +8,13 @@ header .head {
     user-select: none;
 }
 /* SVG Logl */
-.svg-container{
+header .svg-container svg{
+    transform: scale(.8);
+}
 
+.svg-container {
+    padding: 0;
+    margin-left: -15px;
 }
 
 /* Search Box */
@@ -127,13 +132,25 @@ nav.col-3 {
     padding: 0px 12px 0px 12px;
 }
 
+section nav .mini-nav {
+    text-align: center;
+}
+
+section nav .mini-nav a{
+    padding: 0;
+    margin: 0;
+}
+
+section nav .mini-nav svg {
+    transform: scale(.7);
+}
 
 
 hr {
     height: 2px !important;
     margin: 0 0 2px 0;
     color: #fff;
-    border-radius: 99px;
+    border-radius: 50%;
 }
 
 section div nav a {
@@ -145,11 +162,11 @@ section div nav a {
 
 section div nav a:hover {
     background-color: #FF557A;
-    border-radius: 100px;
+    border-radius: 50px;
     color: #fff;
 }
 
-a.active {
+section div nav a.active {
     font-size: 40px;
     font-weight: bold;
     background-color: #FF557A;
