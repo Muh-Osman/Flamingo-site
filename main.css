@@ -1,6 +1,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     height: 5000px;
+    background-color: blueviolet;
 }
 /* Start header */
 header .head {
@@ -182,6 +183,17 @@ svg.big-nav-icon {
     width: 40px;
 }
 
+section div nav a.more {
+    font-size: 18px;
+    font-weight: 300;
+    border: 1px solid #fff;
+    justify-content: center;
+    margin: 0px;
+}
+
+section div nav a.more:hover {
+    border-radius: 0px;
+}
 
 
 
