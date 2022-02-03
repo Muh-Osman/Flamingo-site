@@ -114,7 +114,8 @@ nav {
   height: 100vh;
   border-radius: 0 50px 50px 0;
   background: linear-gradient(180deg, #FE1251 0%, #FF0045 100%);
-  font-size: 40px;
+  font-size: 35px;
+  text-align: left;
 }
 
 nav.col-3 {
@@ -132,9 +133,9 @@ hr {
     margin: 0;
 }
 
-svg {
-    /* height: 30px;
-    width: 30px; */
+svg.big-nav-icon {
+    height: 40px;
+    width: 40px;
 }
 
 
