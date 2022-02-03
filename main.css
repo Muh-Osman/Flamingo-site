@@ -1,7 +1,6 @@
 body {
     font-family: 'Roboto', sans-serif;
     height: 5000px;
-    background-color: blueviolet;
 }
 /* Start header */
 header .head {
@@ -120,8 +119,9 @@ nav {
   height: 100vh;
   border-radius: 0 50px 50px 0;
   background: linear-gradient(180deg, #FE1251 0%, #FF0045 100%);
-  font-size: 36px;
+  font-size: 30px;
   font-weight: 300;
+  line-height: 1.7;
 }
 
 nav.col-3 {
@@ -168,7 +168,7 @@ section div nav a:hover {
 }
 
 section div nav a.active {
-    font-size: 40px;
+    font-size: 36px;
     font-weight: bold;
     background-color: #FF557A;
     border-radius: 100px;
@@ -196,7 +196,16 @@ section div nav a.more:hover {
 }
 
 
-
+.rent-btn {
+border: none;
+padding: 0;
+margin: 10px;
+border-radius: 60px;
+width: 50%;
+text-align: center;
+justify-content: center;
+align-items: center;
+}
 
 
 .img-gallery {
