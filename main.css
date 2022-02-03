@@ -114,8 +114,31 @@ nav {
   height: 100vh;
   border-radius: 0 50px 50px 0;
   background: linear-gradient(180deg, #FE1251 0%, #FF0045 100%);
-  font-size: 88px;
+  font-size: 40px;
 }
+
+nav.col-3 {
+    padding: 0px;
+    width: 20.8333333333%;
+}
+
+.nav-box {
+    padding: 0px 12px 12px 12px;
+}
+
+.mini-nav {
+    margin: 0;
+    
+}
+
+.zzt {
+    height: fit-content;
+}
+
+hr {
+    margin: 0;
+}
+
 
 
 .img-gallery {
