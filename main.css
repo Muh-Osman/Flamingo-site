@@ -137,6 +137,8 @@ nav.col-3 {
 
 section nav .mini-nav {
     text-align: center;
+    padding: 0 5px;
+    margin: 0;
 }
 
 section nav .mini-nav a{
@@ -150,11 +152,13 @@ section nav .mini-nav svg {
 
 /* horizon line customize */
 hr {
-    height: 2px !important;
-    margin: 0 0 2px 0;
-    background-color: yellow;
-    border-radius: 50%;
+    height: 1px;
+    margin: 0 0 3px 0;
+    background-color: #eee;
+    border-radius: 1000px;
+    opacity: 1;
 }
+
 
 section div nav a {
     text-decoration: none;
@@ -171,10 +175,10 @@ section div nav a:hover {
 }
 
 section div nav a.active {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
     background-color: #FF557A;
-    border-radius: 100px;
+    border-radius: 50px;
 }
 
 svg.big-nav-icon {
@@ -202,22 +206,23 @@ section div nav a.more:hover {
 section nav a.rent-btn-box {
     padding: 0;
     width: 95%;
-    margin: 23px auto;
+    margin: 27px auto;
 }
 
 section nav a button.rent-btn {
     border: none;
     padding: 0;
     height: 50px;
-    border-radius: 60px;
+    border-radius: 50px;
+    color: #333333;
     background-color: #fff;
     font-size: 40px;
     font-weight: bold;
 }
 
 a button.rent-btn:hover {
-    background-color: black;
-    color: white;
+    background-color: #333333;
+    color: #fff;
 }
 
 /* Start Gallery */
