@@ -136,6 +136,16 @@ nav.col-3 {
     width: 19%;
 }
 
+nav.col-3::before {
+    content: "";
+    width: 105px;
+    height: 5px;
+    background-color: #fff;
+    position: absolute;
+    top: -5px;
+    left: 118px;
+}
+
 .nav-box {
     padding: 0px 10px 0px 10px;
 }
@@ -263,11 +273,11 @@ section div.img-box::before {
 
 section div.img-box::after {
     content: "";
-    height: 47px;
-    width: 63px;
+    height: 48px;
+    width: 38px;
     background-color: #f2f2f2;
     position: absolute;
-    left: -63px;
+    left: -38px;
     top: -5px;
     z-index: 1;
     border-top: 5px solid #8a12fc;
