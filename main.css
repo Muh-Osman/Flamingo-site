@@ -121,6 +121,7 @@ section.body-site {
 
 nav {
   position: sticky;
+  z-index: 99;
   top: 0;
   height: 100vh;
   border-radius: 0 50px 50px 0;
@@ -137,7 +138,6 @@ nav.col-3 {
 
 .nav-box {
     padding: 0px 10px 0px 10px;
-
 }
 
 section nav .mini-nav {
@@ -237,21 +237,53 @@ section .gallery-section {
 }
 
 section div.img-box {
-    margin: 5px 0px 15px -60px;
+    /* margin: 5px 0px 15px -60px; */
+    margin: 0px 0px 10px 0px;
     height: 275px;
     width: 100%;
+    border: 5px solid #8a12fc;
+    position: relative;
+    z-index: -1;
+}
+
+section div.img-box::before {
+    content: "";
+    height: 50px;
+    width: 50px;
+    background-color: #fff;
+    position: absolute;
+    left: -50.4px;
+    top: -7px;
+    z-index: 2;
+    border-top-right-radius: 50px;
+    border-right: 5px solid #8a12fc;
+    border-top: 5px solid #8a12fc;
+    
+}
+
+section div.img-box::after {
+    content: "";
+    height: 47px;
+    width: 63px;
+    background-color: #f2f2f2;
+    position: absolute;
+    left: -63px;
+    top: -5px;
+    z-index: 1;
+    border-top: 5px solid #8a12fc;
 }
 
 section div img.pic {
-   width: calc(100% + 55px);
+   /* width: calc(100% + 55px); */
+   width: 100%;
    height: 100%;
    object-fit: cover;
    background-size: cover;
    background-repeat: no-repeat;
    background-position: center;
-   filter: drop-shadow(0px -5px #8a12fc) drop-shadow(5px 0px #8a12fc) drop-shadow(5px 5px #8a12fc) drop-shadow(-5px 0px #8a12fc);
-   position: relative;
-   z-index: -1;
+   /* filter: drop-shadow(0px -5px #8a12fc) drop-shadow(5px 0px #8a12fc) drop-shadow(5px 5px #8a12fc) drop-shadow(-5px 0px #8a12fc); */
+   /* position: relative; */
+   /* z-index: -1; */
 }
 
 /* Start main section */
@@ -269,23 +301,19 @@ section div img.pic {
     margin: 0 0 10px 0;
 }
 
-section .shelves a.shelve-title {
-    text-decoration: none;
-    color: var(--bs-body-color);
-    padding: 0px 10px 0px 10px !important;
-    font-size: calc(1.3rem + 0.6vw);
-    font-weight: 500;
+section .shelves h3.shelve-title {
     user-select: none;
     margin: 0;
-        /* display: inline-block; */
-        /* width: fit-content; */
+}
+
+section .shelves h3 a {
+    text-decoration: none;
+    color: var(--bs-body-color);
 }
 
 section .shelves a.shelve-title:hover {
     color: #000;
-    background-color: #8a12fc;
 }
-
 
 .item-cards {
     width: 24%;
