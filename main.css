@@ -2,13 +2,13 @@ body {
     font-family: 'Roboto', sans-serif;
     height: 5000px;
     /* background-color: turquoise; */
+    user-select: none;
 }
 
 
 /* Start header */
 header .head {
     padding: 10px 0 10px;
-    user-select: none;
 }
 /* SVG Logl */
 header .svg-container svg{
@@ -287,7 +287,6 @@ section div img.pic {
    width: 100%;
    height: 100%;
    object-fit: cover;
-   background-size: cover;
    background-repeat: no-repeat;
    background-position: center;
    /* filter: drop-shadow(0px -5px #8a12fc) drop-shadow(5px 0px #8a12fc) drop-shadow(5px 5px #8a12fc) drop-shadow(-5px 0px #8a12fc); */
@@ -305,13 +304,12 @@ section div img.pic {
 
 .shelves {
     background-color: #eee;
-    height: 350px;
+    height: 380px;
     border-radius: 10px;
     margin: 0 0 10px 0;
 }
 
 section .shelves h3.shelve-title {
-    user-select: none;
     margin: 0;
 }
 
@@ -326,19 +324,72 @@ section .shelves h3.shelve-title a:hover {
 
 .item-cards {
     width: 24%;
-    height: 85%;
+    height: 87%;
     border-radius: 10px;
     background: #FFF;
     box-shadow: 0px 3px 10px #00000040;
     margin-bottom: 10px;
     position: relative;
     padding: 0;
+    text-decoration: none;
+    color: #434544;
+    text-align: center;
+}
+
+.item-cards:active {
+    box-shadow: none;
+}
+
+h4 {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px;
+    margin: 0;
+}
+.item-cards:hover {
+    color: #000;
+}
+
+h5 span.price {
+    color: #000;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+h5 span.currency {
+    color: #000;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+h5 {
+    margin: 0;
+    padding: 0 5px 5px;
+}
+
+h5 span.week {
+    color: #434544;
+    font-weight: 400;
+    font-size: 14px;
+    
 }
 
 .img-of-item {
     height: 75%;
     width: 100%;
     border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    padding: 5px;
+    
+}
+
+.img-of-item img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .item-description {
