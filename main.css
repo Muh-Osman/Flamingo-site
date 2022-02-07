@@ -410,7 +410,7 @@ div.img-of-item img {
     height: 100%;
     object-position: center;
     object-fit: contain;
-    object-fit: cover;
+    /* object-fit: cover; */
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 10px 10px 0 0;
@@ -439,6 +439,8 @@ div.img-of-item img {
 
 }
 
+/* Big More Button */
+
 .big-more-btn-box {
     width: 100%;
     margin: 0;
@@ -452,6 +454,46 @@ div.img-of-item img {
 
 .big-more-btn button {
     width: 100%;
-    border: 1px solid #000;
-    border-radius: 10px;
+    height: 32px;
+    border: 1px solid var(--bs-body-color);
+    border-radius: 3px;
+    padding: 0;
+    background-color: #fff;
+    color: var(--bs-body-color);
+}
+
+.big-more-btn button:hover {
+    background-color: #eee;
+    color: #000;
+    border-color: #000;
+}
+
+/* How it works */
+
+.how-it-works-section {
+    margin-top: 25px;
+    height: 95vh;
+}
+
+.how-it-works {
+    margin: 0px;
+    height: 100%;
+    border-radius: 50px;
+    /* background-image: linear-gradient(180deg,#ed2724,#e0004e,#c2006f,#961186,#5c2d90); */
+    background: linear-gradient(-90deg,#f7c626 15%,#f68c2f 40%,#e5127d 85%);
+}
+
+.how-it-works-title {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 500;
+    padding: 10px 35px 0;
+    
+}
+
+.how{
+    background-color: rgb(255, 255, 255);
+    width: 32%;
+    border-radius: 50px;
+    height: 80%;
 }
