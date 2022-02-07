@@ -438,3 +438,20 @@ div.img-of-item img {
 .watches {
 
 }
+
+.big-more-btn-box {
+    width: 100%;
+    margin: 0;
+
+}
+
+.big-more-btn {
+    padding: 0;
+
+}
+
+.big-more-btn button {
+    width: 100%;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
