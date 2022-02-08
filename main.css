@@ -85,20 +85,26 @@ header .log-in {
     font-size: 22px;
     font-weight: bold;
     margin-right: 2px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+
 }
 
 header .log-in:hover {
     background-color: transparent;
     color: #000;
+    box-shadow: rgba(0, 0, 0, 0.13) 0px 7px 15px, rgb(0 0 0 / 5%) 0px 0px 3px;
+    
 }
 
-header .log-in:focus {
+header a  button.log-in.btn-primary:focus {
     background-color: transparent;
     color: #000;
+    box-shadow: rgba(0, 0, 0, 0.13) 0px 7px 15px, rgb(0 0 0 / 5%) 0px 0px 3px;
 }
 
-header a  button.log-in.btn-primary:focus:focus {
-    box-shadow: 0 0 0 0.25rem rgb(138 18 252 / 90%);
+header a  button.log-in.btn-primary:active {
+    box-shadow: none;
+    color: #333;
 }
 
 header .sign-up {
@@ -107,19 +113,28 @@ header .sign-up {
     border-radius: 66px;
     font-size: 22px;
     font-weight: bold;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+
+    
 }
 
 header .sign-up:hover {
-    background-color: #ff0044;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
+    box-shadow: rgba(0, 0, 0, 0.13) 0px 7px 15px, rgb(0 0 0 / 5%) 0px 0px 3px;
+
 }
 
 header .sign-up:focus {
-    background-color: #ff0044;
+    background-color: #fff;
+    color: #000;
+    box-shadow: rgba(0, 0, 0, 0.13) 0px 7px 15px, rgb(0 0 0 / 5%) 0px 0px 3px;
+
 }
 
-header a  button.sign-up.btn-primary:focus:focus {
+header a  button.sign-up.btn-primary:active {
     box-shadow: none;
+    color: #333;
 }
 /* End header */
 
@@ -189,6 +204,8 @@ section div nav a {
     cursor: pointer;
     padding: 7px;
     /* height: calc(100vh / 12); */
+    transition: all 0.1s;
+
 }
 
 section div nav a:hover {
@@ -242,6 +259,8 @@ section nav a button.rent-btn {
     background-color: #fff;
     font-size: 40px;
     font-weight: bold;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+
 }
 
 a button.rent-btn:hover {
@@ -350,6 +369,9 @@ section .shelves h3.shelve-title a:hover {
     color: #000;
 }
 
+.item-cards:hover .item-description {
+background-color: #c1e7fe;
+}
 .item-cards:active {
     box-shadow: none;
 }
@@ -421,6 +443,8 @@ div.img-of-item img {
     height: 25%;
     background-color: #ECF3F9;
     border-radius: 0 0 10px 10px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+
 }
 
 .for-you {
@@ -460,10 +484,11 @@ div.img-of-item img {
     padding: 0;
     background-color: #fff;
     color: var(--bs-body-color);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
 }
 
 .big-more-btn button:hover {
-    background-color: #eee;
+    background-color: #ecf3f9;
     color: #000;
     border-color: #000;
 }
@@ -495,5 +520,43 @@ div.img-of-item img {
     background-color: rgb(255, 255, 255);
     width: 32%;
     border-radius: 50px;
-    height: 80%;
+    height: 75%;
+}
+
+.more-details-link {
+    padding: 0;
+}
+
+.more-details-btn {
+    text-align: right;
+    padding: 0;
+    margin-right: 50px;
+
+}
+
+.more-details-btn button {
+    padding: 13px 20px;
+    border: none;
+    border-radius: 50px;
+    background-color: #FE1251;
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+
+}
+
+.more-details-btn button:hover {
+    color: #333;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.13) 0px 7px 15px, rgb(0 0 0 / 5%) 10px 10px 3px;
+
+}
+
+.more-details-btn button:focus {
+    box-shadow: rgba(0, 0, 0, 0.13) 0px 7px 15px, rgb(0 0 0 / 5%) 1px 1px 3px;
+}
+
+.more-details-btn button:active {
+    box-shadow: none;
 }
