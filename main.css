@@ -1,6 +1,6 @@
 body {
     font-family: 'Roboto', sans-serif;
-    height: 5000px;
+    /* height: 5000px; */
     /* background-color: turquoise; */
     
 }
@@ -380,7 +380,7 @@ section .shelves h3.shelve-title a:hover {
 }
 
 .item-cards:hover .item-description {
-background-color: #c1e7fe;
+/* background-color: #c1e7fe; */
 }
 
 .item-cards:active {
@@ -454,7 +454,7 @@ div.img-of-item img {
     height: 25%;
     /* background-color: #ECF3F9; */
     border-radius: 0 0 10px 10px;
-    transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    /* transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1) 0s; */
     background: rgb(255 255 255 / 20%);
     backdrop-filter: blur(50px);
 
@@ -498,7 +498,7 @@ div.img-of-item img {
     padding: 0;
     background-color: #fff;
     color: var(--bs-body-color);
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    transition: all 0.2s;
 }
 
 .big-more-btn button:hover {
@@ -531,7 +531,6 @@ div.img-of-item img {
 }
 
 .how {
-    background-color: rgb(255, 255, 255);
     width: 32%;
     border-radius: 50px;
     height: 75%;
@@ -544,15 +543,18 @@ div.img-of-item img {
 }
 
 .how:hover {
-    box-shadow: transparent 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, blue 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, green 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, yellow 30px -30px;
-}
+    box-shadow: #ffe3bb 0px 0px 0px 2px inset, #ffe3bb 10px -10px 0px -3px, #000 10px -10px, #ffe3bb 20px -20px 0px -3px, #ffe3bb 20px -20px, #ffe3bb 30px -30px 0px -3px, #ffe3bb 30px -30px;
 
+}
 .how img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     background-position: center;
+    
 }
+
+
 
 .how h2 {
     position: absolute;
