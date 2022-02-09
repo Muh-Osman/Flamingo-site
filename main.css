@@ -487,24 +487,40 @@ div.img-of-item img {
 
 .big-more-btn {
     padding: 0;
-
 }
 
 .big-more-btn button {
-    width: 40%;
+    width: 100%;
     height: 32px;
+    font-weight: 500;
+    background: none;
+    color: var(--bs-body-color);
     border: 1px solid var(--bs-body-color);
     border-radius: 3px;
     padding: 0;
-    background-color: #fff;
-    color: var(--bs-body-color);
-    transition: all 0.2s;
+    position: relative;
+    z-index: 1;    
 }
 
 .big-more-btn button:hover {
-    background-color: #ecf3f9;
-    color: #000;
-    border-color: #000;
+    border-color: var(--bs-body-color);
+    color: #fff;
+}
+
+.big-more-btn button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #383736;
+}
+
+.big-more-btn button:hover::before {
+    height: 100%;
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 2);
 }
 
 /* How it works */
@@ -544,8 +560,9 @@ div.img-of-item img {
 
 .how:hover {
     box-shadow: #ffe3bb 0px 0px 0px 2px inset, #ffe3bb 10px -10px 0px -3px, #000 10px -10px, #ffe3bb 20px -20px 0px -3px, #ffe3bb 20px -20px, #ffe3bb 30px -30px 0px -3px, #ffe3bb 30px -30px;
-
 }
+
+
 .how img {
     width: 100%;
     height: 100%;
