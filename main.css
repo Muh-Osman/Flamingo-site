@@ -6,7 +6,7 @@ body {
 }
 
 ::selection {
-    background-color: #8a13fc;
+    background-color: #FF557A;
 }
 
 a {
@@ -455,8 +455,8 @@ div.img-of-item img {
     /* background-color: #ECF3F9; */
     border-radius: 0 0 10px 10px;
     /* transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1) 0s; */
-    background: rgb(255 255 255 / 20%);
-    backdrop-filter: blur(50px);
+    /* background: rgb(255 255 255 / 20%); */
+    /* backdrop-filter: blur(50px); */
 
 
 }
