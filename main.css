@@ -1,6 +1,6 @@
 body {
     font-family: 'Roboto', sans-serif;
-    height: 5000px;
+    /* height: 5000px; */
     /* background-color: turquoise; */
     
 }
@@ -642,6 +642,12 @@ h2 mark {
     height: 500px;
     border-radius: 10px;
     margin: 0 0 25px 0;
+    position: relative;
+    z-index: -1;
+}
+
+section .shelves-down h3 {
+    margin: 0;
 }
 
 section .shelves-down h3 a {
@@ -654,18 +660,65 @@ section .shelves-down .item-cards-down:hover {
 }
 
 
-.item-cards-down {
+a.item-cards-down {
     width: 22%;
     height: 87%;
     border-radius: 10px;
     background: #FFF;
-    box-shadow: 0px 3px 10px #00000040;
-    margin-bottom: 5px;
+    /* box-shadow: 0px 3px 10px #00000040; */
+    margin-bottom: 15px;
     position: relative;
     padding: 0;
     color: #434544;
     text-align: center;
+    /* z-index: 100; */
 }
+
+a.item-cards-down:active {
+    box-shadow: none;
+}
+
+a.item-cards-down::before {
+    content:"";
+    position: absolute;
+    left: 5px;
+    bottom: 2px;
+    z-index: -1;
+    height: 50px;
+    width: 100px;
+    transform-origin: bottom left;
+    background: none;
+    border-radius: 10px;
+    transition: all .2s;
+    transform: rotate(350deg) skew(350deg, 2deg);
+
+}
+
+.item-cards-down:hover::before {
+    box-shadow: 0px 13px 5px #00000040;
+}
+
+a.item-cards-down::after {
+    content:"";
+    position: absolute;
+    right: 5px;
+    bottom: 2px;
+    z-index: -1;
+    height: 50px;
+    width: 100px;
+    transform-origin: bottom right;
+    background: none;
+    border-radius: 10px;
+    transition: all .2s;
+    transform: rotate(10deg) skew(10deg, 358deg);
+}
+
+.item-cards-down:hover::after {
+    box-shadow: 0px 13px 5px #00000040;
+}
+
+
+
 
 .added-recently {
 
