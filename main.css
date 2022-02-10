@@ -1,16 +1,18 @@
 body {
     font-family: 'Roboto', sans-serif;
-    /* height: 5000px; */
+    height: 5000px;
     /* background-color: turquoise; */
     
 }
 
 ::selection {
     background-color: #FF557A;
+    color: #fff;
 }
 
 a {
     user-select: none;
+    text-decoration: none;
 }
 
 
@@ -208,7 +210,6 @@ hr {
 
 
 section div nav a {
-    text-decoration: none;
     color: #fff;
     cursor: pointer;
     padding: 7px;
@@ -353,11 +354,11 @@ section .shelves h3.shelve-title {
 }
 
 section .shelves h3 a {
-    text-decoration: none;
     color: var(--bs-body-color);
 }
 
-section .shelves h3.shelve-title a:hover {
+section .shelves h3.shelve-title a:hover,
+.item-cards:hover {
     color: #000;
 }
 
@@ -370,13 +371,8 @@ section .shelves h3.shelve-title a:hover {
     margin-bottom: 5px;
     position: relative;
     padding: 0;
-    text-decoration: none;
     color: #434544;
     text-align: center;
-}
-
-.item-cards:hover {
-    color: #000;
 }
 
 .item-cards:hover .item-description {
@@ -555,13 +551,20 @@ section.how-it-works-section {
     overflow: hidden;
     padding: 0;
     position: relative;
-    text-align: center;
-    transition: 0.2s;
-    
+    text-align: center;    
 }
 
-.how:hover {
-    box-shadow: #ffe3bb 0px 0px 0px 2px inset, #ffe3bb 10px -10px 0px -3px, #000 10px -10px, #ffe3bb 20px -20px 0px -3px, #ffe3bb 20px -20px, #ffe3bb 30px -30px 0px -3px, #ffe3bb 30px -30px;
+.one {
+    background-color: #faead3;
+
+}
+
+.two {
+    background-color: #d86262;
+}
+
+.three {
+    background-color: #faead3;
 }
 
 
@@ -570,31 +573,25 @@ section.how-it-works-section {
     height: 100%;
     object-fit: cover;
     background-position: center;
-    
+    transition: all .3s;
 }
 
-
+.how:hover img {
+    transform: scale(1.1);
+    filter: drop-shadow(0px 0px 10px rgb(112, 112, 112));
+}
 
 .how h2 {
     position: absolute;
-    top: 65%;
+    top: 80%;
     line-height: 1.4;
 }
 
-.how p {
-    position: absolute;
-    top: 85%;
-    font-size: 20px;
-    font-weight: 300;
-}
 
 h2 mark {
     background-color:#f68c2f;
 }
 
-p mark {
-
-}
 
 .more-details-link {
     padding: 0;
@@ -648,9 +645,14 @@ p mark {
 }
 
 section .shelves-down h3 a {
-    text-decoration: none;
     color: var(--bs-body-color);
 }
+
+section .shelves-down h3 a:hover,
+section .shelves-down .item-cards-down:hover {
+    color: #000;
+}
+
 
 .item-cards-down {
     width: 22%;
@@ -661,11 +663,60 @@ section .shelves-down h3 a {
     margin-bottom: 5px;
     position: relative;
     padding: 0;
-    text-decoration: none;
     color: #434544;
     text-align: center;
 }
 
 .added-recently {
 
+}
+
+
+
+
+
+
+/* Test */
+.uuu {
+  padding: 15px 30px;
+  position: relative;
+  z-index: 1;
+  border: 1px solid #434544;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+    transition: all .4s;
+}
+
+.yyy {
+    text-align: center;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+  font-size: large;
+}
+
+.uuu:hover {
+    color: #fff;
+}
+
+.uuu::before {
+  content: "";
+  width: calc(100% + 140px);
+  height: calc(100% + 140px);
+  margin: 0;
+  background: none;
+  position: absolute;
+  z-index: -3;
+  border: 70px solid;
+  border-color: #434544;
+  transition: all .4s;
+}
+
+.uuu:hover::before {
+    height: 0;
+    width: 0;
 }
