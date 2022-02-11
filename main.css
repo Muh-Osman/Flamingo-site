@@ -454,8 +454,6 @@ div.img-of-item img {
     /* transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1) 0s; */
     /* background: rgb(255 255 255 / 20%); */
     /* backdrop-filter: blur(50px); */
-
-
 }
 
 .for-you {
@@ -533,8 +531,8 @@ section.how-it-works-section {
     margin: 0px;
     height: 100%;
     border-radius: 50px;
-    /* background-image: linear-gradient(180deg,#ed2724,#e0004e,#c2006f,#961186,#5c2d90); */
-    background: linear-gradient(-90deg,#f7c626 15%,#f68c2f 40%,#e5127d 85%);
+    background-image: linear-gradient(135deg,#FF0045,#e0004e,#c2006f,#961186,#5c2d90);
+    /* background: linear-gradient(-90deg,#f7c626 15%,#f68c2f 40%,#e5127d 85%); */
 }
 
 .how-it-works-title {
@@ -613,7 +611,7 @@ h2 mark {
     color: #fff;
     font-size: 22px;
     font-weight: bold;
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    transition: all 0.2s;
 
 }
 
@@ -624,16 +622,12 @@ h2 mark {
 
 }
 
-.more-details-btn button:focus {
-    box-shadow: rgba(0, 0, 0, 0.13) 0px 7px 15px, rgb(0 0 0 / 5%) 1px 1px 3px;
-}
-
 .more-details-btn button:active {
     box-shadow: none;
 }
 
 
-/* Most popular */
+/* Most popular & Added Recently */
 .most-popular {
 
 }
@@ -674,9 +668,9 @@ a.item-cards-down {
     transition: all .2s;
 }
 
-a.item-cards-down:active {
+/* a.item-cards-down:active {
     box-shadow: none;
-}
+} */
 
 a.item-cards-down::before {
     content:"";
@@ -695,6 +689,11 @@ a.item-cards-down::before {
 
 .item-cards-down:hover::before {
     box-shadow: 0px 13px 5px #00000040;
+}
+
+
+.item-cards-down:active::before {
+    box-shadow: none;
 }
 
 a.item-cards-down::after {
@@ -717,11 +716,22 @@ a.item-cards-down::after {
 }
 
 
+.item-cards-down:active::after {
+    box-shadow: none;
+}
+
 
 
 .added-recently {
 
 }
+
+
+/* Top brands section */
+i {
+    font-size: 50px;
+}
+
 
 
 
@@ -748,7 +758,7 @@ a.item-cards-down::after {
   justify-content: center;
   align-items: center;
   font-weight: 900;
-  font-size: large;
+  font-size: 18px;
 }
 
 .uuu:hover {
