@@ -1,6 +1,6 @@
 body {
     font-family: 'Roboto', sans-serif;
-    /* height: 5000px; */
+    height: 5000px;
     /* background-color: turquoise; */
     
 }
@@ -728,9 +728,111 @@ a.item-cards-down::after {
 
 
 /* Top brands section */
-i {
-    font-size: 50px;
+
+section .top-brands-shelve {
+    height: 250px;
+    margin-bottom: 25px;
+
+    /* background-color: #eee; */
+
 }
+
+section .top-brands-shelve h3 {
+    color: var(--bs-body-color);;
+    font-size: calc(1.3rem + 0.6vw);;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.top-brand {
+    background-color: #fff;
+    height: 80%;
+    margin: 0 5px;
+    width: 15%;
+    border: 1px solid #434544;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+section .top-brands-shelve svg {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* APPLE */
+.uniform {
+    padding: 10px 10px;
+    position: relative;
+    z-index: 1;
+    border: 1px solid #434544;
+    background: none;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.uniform::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: none;
+    position: absolute;
+    z-index: -3;
+    box-shadow: 0px 0px 0px 100px #434544;
+    transition: all .4s;
+}
+
+.uniform path {
+    fill: #434544;
+    transition:all .4s;
+}
+
+a.uniform:hover.apple path,
+.uniform:hover::before {
+    fill: #fff;
+    height: 0;
+    width: 0;
+}
+
+
+/* SAMSUNG */
+section .top-brands-shelve .samsung svg .galaxy {
+    fill: #434544;
+}
+
+section .top-brands-shelve .samsung svg .letter {
+    fill: #fff;
+}
+
+/* SONY */
+.sony svg path{
+    fill: #434544;
+}
+
+/* CANON */
+.canon svg path{
+    fill: #434544;
+}
+
+/* DELL */
+.dell svg path{
+    fill: #434544;
+}
+
+.nintendo svg path{
+    fill: #434544;
+}
+
+.nintendo svg path.back{
+    fill: #fff;
+}
+
+
 
 
 
@@ -750,6 +852,10 @@ i {
   align-items: center;
   overflow: hidden;
     transition: all .4s;
+
+
+    width: 25px;
+    height: 25px;
 }
 
 .yyy {
@@ -759,6 +865,10 @@ i {
   align-items: center;
   font-weight: 900;
   font-size: 18px;
+
+
+  width: 100%;
+  height: 50px;
 }
 
 .uuu:hover {
