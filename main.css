@@ -487,10 +487,11 @@ div.img-of-item img {
 .big-more-btn button {
     width: 100%;
     height: 32px;
+    margin-top: 15px;
     font-weight: 500;
     background: none;
     color: var(--bs-body-color);
-    border: 1px solid var(--bs-body-color);
+    border: 1px solid #434544;
     border-radius: 3px;
     padding: 0;
     position: relative;
@@ -512,7 +513,9 @@ div.img-of-item img {
     left: -1px;
     width: calc(100% + 2px);
     height: 0%;
-    background: #383736;
+    background: #434544;
+    transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 2);
+
 }
 
 .big-more-btn button:hover::before {
@@ -720,10 +723,15 @@ a.item-cards-down::after {
     box-shadow: none;
 }
 
-
-
 .added-recently {
 
+}
+
+
+.down-hr {
+    width: 90%;
+    margin: auto;
+    /* background-color: #434544; */
 }
 
 
@@ -732,17 +740,16 @@ a.item-cards-down::after {
 section .top-brands-shelve {
     height: 250px;
     margin-bottom: 25px;
-
     /* background-color: #eee; */
-
 }
 
 section .top-brands-shelve h3 {
-    color: var(--bs-body-color);;
-    font-size: calc(1.3rem + 0.6vw);;
+    color: var(--bs-body-color);
+    font-size: calc(1.3rem + 0.6vw);
     font-weight: 500;
     line-height: 1.2;
     margin: 0;
+    padding-left: 20px;
 }
 
 .top-brand {
@@ -760,8 +767,6 @@ section .top-brands-shelve svg {
     height: 100%;
 }
 
-
-/* APPLE */
 .uniform {
     padding: 10px 10px;
     position: relative;
@@ -769,7 +774,6 @@ section .top-brands-shelve svg {
     border: 1px solid #434544;
     background: none;
     overflow: hidden;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -784,111 +788,110 @@ section .top-brands-shelve svg {
     position: absolute;
     z-index: -3;
     box-shadow: 0px 0px 0px 100px #434544;
+    transition: .4s;
+}
+
+/* APPLE */
+.apple path {
+    fill: #434544;
     transition: all .4s;
 }
 
-.uniform path {
-    fill: #434544;
-    transition:all .4s;
-}
-
-a.uniform:hover.apple path,
-.uniform:hover::before {
+a.apple:hover.apple path,
+.apple:hover::before {
     fill: #fff;
     height: 0;
     width: 0;
 }
 
-
 /* SAMSUNG */
 section .top-brands-shelve .samsung svg .galaxy {
     fill: #434544;
+    transition: .4s;
 }
 
 section .top-brands-shelve .samsung svg .letter {
     fill: #fff;
+    transition: .4s;
 }
+
+a.samsung:hover.samsung .galaxy,
+a.samsung:hover::before {
+    fill: #fff;
+    height: 0;
+    width: 0;
+}
+
+a.samsung:hover.samsung .letter {
+    fill: #434544;
+}
+
 
 /* SONY */
 .sony svg path{
     fill: #434544;
+    transition: .4s;
+}
+
+a.sony:hover.sony path,
+.sony:hover::before {
+    fill: #fff;
+    height: 0;
+    width: 0;
 }
 
 /* CANON */
 .canon svg path{
     fill: #434544;
+    transition: .4s;
+}
+
+a.canon:hover.canon path,
+.canon:hover::before {
+    fill: #fff;
+    height: 0;
+    width: 0;
 }
 
 /* DELL */
 .dell svg path{
     fill: #434544;
+    transition: .4s;
 }
 
+a.dell:hover.dell path,
+.dell:hover::before {
+    fill: #fff;
+    height: 0;
+    width: 0;
+}
+
+/* Nintendo */
 .nintendo svg path{
     fill: #434544;
+    transition: .4s;
 }
 
 .nintendo svg path.back{
     fill: #fff;
+    transition: .4s;
 }
 
-
-
-
-
-
-
-
-
-/* Test */
-.uuu {
-  padding: 15px 30px;
-  position: relative;
-  z-index: 1;
-  border: 1px solid #434544;
-  background: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-    transition: all .4s;
-
-
-    width: 25px;
-    height: 25px;
-}
-
-.yyy {
-    text-align: center;
-    display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 900;
-  font-size: 18px;
-
-
-  width: 100%;
-  height: 50px;
-}
-
-.uuu:hover {
-    color: #fff;
-}
-
-.uuu::before {
-  content: "";
-  width: calc(100% + 140px);
-  height: calc(100% + 140px);
-  margin: 0;
-  background: none;
-  position: absolute;
-  z-index: -3;
-  border: 70px solid;
-  border-color: #434544;
-  transition: all .4s;
-}
-
-.uuu:hover::before {
+a.nintendo:hover.nintendo path,
+.nintendo:hover::before {
+    fill: #fff;
     height: 0;
     width: 0;
+}
+
+a.nintendo:hover svg path.back {
+    fill: #434544;
+}
+
+
+/* Footer */
+footer {
+    height: 391px;
+    background-color: #8a12fc;
+    border-radius: 50px 50px 0 0;
 }
