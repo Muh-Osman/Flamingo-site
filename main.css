@@ -31,7 +31,7 @@ header .svg-container svg{
 }
 
 .svg-container:hover .eye {
-    fill: #5A89E7;
+    fill: #fff;
 }
 
 /* Search Box */
