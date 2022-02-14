@@ -30,6 +30,10 @@ header .svg-container svg{
     margin-left: -15px;
 }
 
+.svg-container:hover .eye {
+    fill: #5A89E7;
+}
+
 /* Search Box */
 header .search-box {
     width: auto;
@@ -63,6 +67,16 @@ header .search-form input {
     border: none;
     font-weight: bold;
     caret-color: #FF0045;
+}
+
+input:focus::placeholder {
+  transform: translateX(-75px);
+  transition: all .2s;
+}
+
+input:not(:focus)::placeholder {
+    transform: translateX(0px);
+    transition: all .2s;
 }
 
 .search-form {
