@@ -911,7 +911,7 @@ a.nintendo:hover svg path.back {
 footer {
     height: 500px;
     background: linear-gradient(123.76deg, #E137C4 33.38%, #5A89E7 78.78%);
-    border-radius: 100px 100px 0 0;
+    border-radius: 75px 75px 0 0;
 }
 
 footer table th {
@@ -927,30 +927,38 @@ footer table a:hover {
     text-decoration: underline;
 }
 
-table {
+/* table {
     width: 100%;
     height: 100%;
     margin-top: 50px;
+} */
+
+
+
+footer form {
+    margin-bottom: 50px;
 }
 
+footer form input {
+    display: block;
+}
 
-
-.tank {
+.lang-loc-app {
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-    gap: 50px; 
-    flex-basis: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     
 }
 
 
 .soc-pay {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px; 
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; 
 }
 
 
@@ -958,9 +966,20 @@ table {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2px; 
+    gap: 15px; 
 }
 
+.social .facebook:hover path{
+    fill: #3b5998;
+}
+
+.social .twitter:hover path{
+    fill: #1da1f2;
+}
+
+.social .instagram:hover path{
+    fill: #f09433;;
+}
 
 .payments {
     display: flex;
@@ -971,10 +990,10 @@ table {
 
 .contact {
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     gap: 5px;
-    flex-direction: column;
     padding-left: 20px;
     border-left: 2px solid #eee;
 }
@@ -982,6 +1001,10 @@ table {
 .contact a {
     color: #000;
     user-select: auto;
+}
+
+.contact a:hover {
+    text-decoration: underline;
 }
 
 .contact svg {
