@@ -933,13 +933,114 @@ table {
     margin: 25px 0 0 25px;
 }
 
-footer form {
-    margin-bottom: 90px;
+footer .lang-loc-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 74px;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    
+
 }
 
-footer form input {
-    display: block;
+
+
+.lang {
+    background-color: #f68c2f;
+    width: 75%;
+    height: 50px;
+    border-radius: 25px 25px 25px 25px;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    position: relative;
+
+    transition: all .1s;
 }
+
+
+
+.arabic {
+    /* display: none; */
+    opacity: 0;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    /* z-index: -1; */
+    top: 75%;
+    user-select: none;
+
+    transition: all .1s;
+    
+    border-radius: 0 0 25px 25px;
+    
+
+}
+
+
+
+.arabic a {
+    color: #000;
+}
+
+.lang:focus  svg.eChxup {
+    transform: rotate(180deg);
+    transition: all .3s;
+
+    animation: turn 4s;
+}
+
+.lang:not(:focus) svg.eChxup {
+    transform: rotate(0deg);
+    transition: all .3s;
+}
+
+
+.lang:focus .arabic {
+    background-color: #fff;
+    /* display: block; */
+    top: 100%;
+    transition: all .1s;
+    opacity: 1;
+    border-top: 1px solid #eee;
+
+}
+
+.arabic:hover {
+    background-color: #eee !important;
+}
+
+.lang:focus {
+    border-radius: 25px 25px 0 0;
+    transition: all .1s;
+
+}
+
+
+
+.loc {
+    background-color: #eee;
+    width: 75%;
+    height: 50px;
+    border-radius: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .lang-loc-app {
     display: flex;
