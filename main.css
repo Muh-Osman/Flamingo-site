@@ -101,6 +101,71 @@ header .search-icon {
     cursor: pointer;
 }
 
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input.dark-mode {
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label.slider {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 100px;
+	height: 50px;
+	display: block;
+	border-radius: 50px;
+	position: relative;
+	transition: 0.4s;
+}
+
+label.slider:hover {
+	background: #000;
+	transition: 0.4s;
+}
+
+label.slider::before {
+	content: '';
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 40px;
+	height: 40px;
+    background: url('images/logos/moon_logo.svg') no-repeat center;
+	background-size: 30px;
+	background-color: #fff;
+	border-radius: 45px;
+	transition: 0.4s;
+}
+
+input.dark-mode:checked:hover + label.slider {
+	background: #FE1251;
+	transition: .4s;
+}
+
+input.dark-mode:checked + label.slider::before {
+    background: url('images/logos/sun_logo.png') no-repeat center;
+	background-size: 30px;
+	background-color: #fff;
+	border-radius: 25px;
+	transition: 0.4s;	
+}
+
+input.dark-mode:checked + label.slider::before {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+label.slider:active::before {
+	width: 66px;
+}
+
 /* Log in & Sign up Button */
 header .btn-box {
     text-align: right;
@@ -1000,7 +1065,6 @@ footer .lang-loc {
     align-items: center;
     justify-content: space-between;
     gap: 10px;
-    /* padding-left: 25px; */
 }
 
 .arabic,
@@ -1023,18 +1087,6 @@ footer .lang-loc {
     transform: rotate(0deg);
     transition: all .3s;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
