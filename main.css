@@ -105,7 +105,8 @@ header .search-icon {
 .dark-mode-toggle {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+    padding-right: 0;
 }
 
 input.dark-mode {
@@ -117,27 +118,27 @@ input.dark-mode {
 label.slider {
 	cursor: pointer;
 	text-indent: -9999px;
-	width: 100px;
-	height: 50px;
+	width: 90px;
+	height: 45px;
 	display: block;
-	border-radius: 50px;
+	border-radius: 45px;
 	position: relative;
 	transition: 0.4s;
 }
 
 label.slider:hover {
-	background: #000;
+	background: #FE1251;
 	transition: 0.4s;
 }
 
 label.slider::before {
 	content: '';
 	position: absolute;
-	top: 5px;
-	left: 5px;
-	width: 40px;
-	height: 40px;
-    background: url('images/logos/moon_logo.svg') no-repeat center;
+	top: 3px;
+	left: 3px;
+	width: 39px;
+	height: 39px;
+    background: url('images/logos/sun_logo.png') no-repeat center;
 	background-size: 30px;
 	background-color: #fff;
 	border-radius: 45px;
@@ -145,12 +146,12 @@ label.slider::before {
 }
 
 input.dark-mode:checked:hover + label.slider {
-	background: #FE1251;
+	background: #000;
 	transition: .4s;
 }
 
 input.dark-mode:checked + label.slider::before {
-    background: url('images/logos/sun_logo.png') no-repeat center;
+    background: url('images/logos/moon_logo.svg') no-repeat center;
 	background-size: 30px;
 	background-color: #fff;
 	border-radius: 25px;
@@ -158,13 +159,18 @@ input.dark-mode:checked + label.slider::before {
 }
 
 input.dark-mode:checked + label.slider::before {
-	left: calc(100% - 5px);
+	left: calc(100% - 3px);
 	transform: translateX(-100%);
 }
 
 label.slider:active::before {
-	width: 66px;
+	width: 60px;
 }
+
+
+
+
+
 
 /* Log in & Sign up Button */
 header .btn-box {
