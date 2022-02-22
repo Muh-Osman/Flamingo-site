@@ -101,12 +101,14 @@ header .search-icon {
     cursor: pointer;
 }
 
+
+
+
 /* Dark Mode Toggle */
 .dark-mode-toggle {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding-right: 0;
 }
 
 input.dark-mode {
@@ -164,7 +166,7 @@ input.dark-mode:checked + label.slider::before {
 }
 
 label.slider:active::before {
-	width: 60px;
+	width: 60%;
 }
 
 
