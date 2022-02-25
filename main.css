@@ -1,8 +1,6 @@
 body {
     font-family: 'Roboto', sans-serif;
-    height: 5000px;
-    /* background-color: turquoise; */
-    
+    height: 5000px;    
 }
 
 ::selection {
@@ -13,6 +11,10 @@ body {
 a {
     user-select: none;
     text-decoration: none;
+}
+
+button {
+    user-select: none;
 }
 
 
@@ -109,6 +111,8 @@ header .search-icon {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    /* flex-shrink: 0; */
+    /* flex-grow: 1; */
 }
 
 input.dark-mode {
@@ -143,7 +147,7 @@ label.slider::before {
     background: url('images/logos/sun_logo.png') no-repeat center;
 	background-size: 30px;
 	background-color: #fff;
-	border-radius: 45px;
+	border-radius: 25px;
 	transition: 0.4s;
 }
 
@@ -176,7 +180,9 @@ label.slider:active::before {
 
 /* Log in & Sign up Button */
 header .btn-box {
-    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 header .log-in {
@@ -471,7 +477,7 @@ section .shelves h3.shelve-title a:hover,
 }
 
 .item-cards:active {
-    box-shadow: none;
+    box-shadow: none;  
 }
 
 div.item-description h4 {
@@ -522,7 +528,6 @@ div.img-of-item {
     border-radius: 10px 10px 0 0;
     overflow: hidden;
     padding: 5px;
-    
 }
 
 div.img-of-item img {
