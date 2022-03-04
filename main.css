@@ -381,54 +381,48 @@ section .gallery-section {
     width: 81%
 }
 
-section div.img-box {
-    /* margin: 5px 0px 15px -60px; */
+section .gallery-section .img-box {
+    margin: 0  12px 12px;
     user-select: none;
-    margin: 0px 0px 10px 0px;
-    height: 275px;
-    width: 100%;
-    border: 5px solid #8a12fc;
-    position: relative;
-    z-index: -1;
 }
 
-section div.img-box::before {
-    content: "";
-    height: 50px;
-    width: 50px;
-    background-color: #fff;
-    position: absolute;
-    left: -50.4px;
-    top: -7px;
-    z-index: 2;
-    border-top-right-radius: 50px;
-    border: 5px solid #8a12fc;
-    border-width: 5px 5px 0px 0px;
+.carousel-inner {
+    border-radius: 10px;
+    /* border: 3px solid #8a12fc; */
 }
 
-section div.img-box::after {
-    content: "";
-    height: 48px;
-    width: 38px;
-    background-color: #f2f2f2;
-    position: absolute;
-    left: -38px;
-    top: -5px;
-    z-index: 1;
-    border-top: 5px solid #8a12fc;
+.carousel-indicators {
+    margin-bottom: 0.6rem;
 }
 
-section div img.pic {
-   /* width: calc(100% + 55px); */
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
-   background-repeat: no-repeat;
-   background-position: center;
-   /* filter: drop-shadow(0px -5px #8a12fc) drop-shadow(5px 0px #8a12fc) drop-shadow(5px 5px #8a12fc) drop-shadow(-5px 0px #8a12fc); */
-   /* position: relative; */
-   /* z-index: -1; */
+.carousel-indicators [data-bs-target] {
+  position: relative;
+  width: 8%;
+  height: 6px;
+  border: none;
+  border-radius: 24px;
 }
+
+.carousel-indicators [data-bs-target] span {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #8b12fc;
+  border-radius: inherit;
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: #fe1251;
+}
+
+.carousel-indicators .active {
+    opacity: .5;
+}
+/* End Gallery */
+
 
 /* Start main section */
 .main-box {
@@ -1087,6 +1081,8 @@ footer .lang-loc {
     user-select: none;
     border-top: 1px solid #33333312;
     padding-left: 44px;
+    display: flex;
+    align-items: center;
 }
 
 .lang:hover  svg.eChxup,
