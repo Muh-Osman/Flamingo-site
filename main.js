@@ -1,26 +1,55 @@
-var materialDesign = document.querySelectorAll(".item-description");
+// Dark Mode
+// check for saved 'darkMode' in localStorage
+let darkMode = localStorage.getItem('darkMode');
 
-Array.prototype.forEach.call(materialDesign, function (b) {
-    b.addEventListener('mousedown', createRipple);
-})
+const darkModeToggle = document.querySelector('#dark-mode-toggle');
 
-function createRipple(e) {
-
-    if (this.getElementsByClassName('ripple').length > 0) {
-        this.removeChild(this.childNodes[5]);
-    }
-
-    var circle = document.createElement('div');
-    this.appendChild(circle);
-
-    var d = Math.max(this.clientWidth, this.clientHeight);
-    circle.style.width = circle.style.height = d + 'px';
-
-    circle.style.left = e.clientX - this.offsetLeft - d / 2 + 'px';
-    circle.style.top = e.clientY - this.offsetTop - d / 2 + 'px';
-
-    circle.classList.add('ripple');
+//On Load check if User checked input before
+window.onload = load();
+function load() {
+    var checked = JSON.parse(localStorage.getItem('dark-mode-toggle'));
+    document.getElementById("dark-mode-toggle").checked = checked;
 }
+
+const enableDarkMode = () => {
+    // 1. Add the class to the body
+    document.body.classList.add('darkmode');
+    // 2. Update darkMode in localStorage
+    localStorage.setItem('darkMode', 'enabled');
+}
+
+const disableDarkMode = () => {
+    // 1. Remove the class from the body
+    document.body.classList.remove('darkmode');
+    // 2. Update darkMode in localStorage 
+    localStorage.setItem('darkMode', null);
+}
+
+// If the user already visited and enabled darkMode
+// start things off with it on
+if (darkMode === 'enabled') {
+    enableDarkMode();
+}
+
+// When someone clicks the button
+darkModeToggle.addEventListener('change', () => {
+
+    // set checked input in LocalStorage if User click on it
+    localStorage.setItem('dark-mode-toggle', darkModeToggle.checked);
+
+    // get their darkMode setting
+    darkMode = localStorage.getItem('darkMode');
+
+    // if it not current enabled, enable it
+    if (darkMode !== 'enabled') {
+        enableDarkMode();
+        // if it has been enabled, turn it off  
+    } else {
+        disableDarkMode();
+    }
+});
+
+
 
 
 // Carousel Indicator

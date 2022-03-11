@@ -1,6 +1,67 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    height: 5000px;    
+    font-family: 'Roboto', sans-serif; 
+    background-color: var(--clr-background);
+}
+
+:root {
+    --clr-background: #fff;
+    --clr-logo: #fe1251;
+    --clr-placeholder: #777;
+    --clr-input-background: #fff;
+    --clr-shelves: #eee;
+
+    --clr-font: #212529;
+    --clr-font-hover: #000;
+    --clr-black-white: #000;
+    --clr-light: #fff;
+    --clr-dark: #eee;
+    --clr-light-dark: #292929;
+    --clr-primary: #;
+    --clr-secondary: #;
+    --clr-accent: #;
+    --clr-box-shadow: 0px 3px 10px #00000040;
+    --clr-box-shadow-hover: 0px 3px 10px #00000040;
+    --background-gradient: linear-gradient(180deg, #FE1251 0%, #FF0045 100%);
+    --clr-btn: #434544;
+
+
+    
+
+    --foreground: var(--clr-font);
+    --background-d: var(--clr-dark);
+    --background-l: var(--clr-light);
+}
+
+.darkmode {
+    --clr-background: #121212;
+    --clr-placeholder: #AAA;
+    --clr-input-background: #292929;
+    --clr-shelves: #292929;
+
+
+
+
+    --clr-font: #D9D9D9;
+    --clr-font-hover: #FFF;
+    --clr-black-white: #fff;
+    --clr-light: #fff;
+    --clr-dark: #121212;
+    --clr-light-dark: #292929;
+    --clr-primary: #;
+    --clr-secondary: #;
+    --clr-accent: #;
+    --clr-box-shadow: none;
+    --clr-box-shadow-hover: 0px 0px 8px -1px #ffffff;
+    --background-gradient: #292929;
+    --clr-btn: #292929;
+
+
+
+
+    --foreground: var(--clr-font);
+    --background-d: var(--clr-light-dark);
+    --background-l: var(--clr-dark);
+
 }
 
 ::selection {
@@ -22,19 +83,20 @@ button {
 header .head {
     padding: 10px 0 10px;
 }
-/* SVG Logl */
-header .svg-container svg{
-    transform: scale(.8);
+
+/* Logo */
+.logo-link {
+    line-height: 1;
+    color: var(--clr-logo);
+    font-size: 3.6vw;
+    font-family: 'aclonica', 'Roboto', sans-serif;
+    font-weight: 400; /* NOT allow more weight for this font */
 }
 
-.svg-container {
-    padding: 0;
-    margin-left: -15px;
+.logo-link:hover {
+    color: var(--clr-logo);
 }
 
-.svg-container:hover .eye {
-    fill: #fff;
-}
 
 /* Search Box */
 header .search-box {
@@ -55,6 +117,7 @@ header .search-box {
 
 input::placeholder {
     user-select: none;
+    color: var(--clr-placeholder);
 }
 
 header .search-box:hover {
@@ -73,6 +136,9 @@ header .search-form input {
     border: none;
     font-weight: bold;
     caret-color: #FF0045;
+
+    background-color: var(--clr-input-background);
+
 }
 
 input:focus::placeholder {
@@ -107,15 +173,16 @@ header .search-icon {
 
 
 /* Dark Mode Toggle */
-.dark-mode-toggle {
+.dark-box {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
     /* flex-shrink: 0; */
     /* flex-grow: 1; */
 }
 
-input.dark-mode {
+input.dark {
 	height: 0;
 	width: 0;
 	visibility: hidden;
@@ -133,7 +200,7 @@ label.slider {
 }
 
 label.slider:hover {
-	background: #FE1251;
+	background: #000;
 	transition: 0.4s;
 }
 
@@ -144,34 +211,34 @@ label.slider::before {
 	left: 3px;
 	width: 39px;
 	height: 39px;
-    background: url('images/logos/sun_logo.png') no-repeat center;
+    background: url('images/logos/moon_logo.svg') no-repeat center;
 	background-size: 30px;
 	background-color: #fff;
 	border-radius: 25px;
 	transition: 0.4s;
 }
 
-input.dark-mode:checked:hover + label.slider {
-	background: #000;
+input.dark:checked:hover + label.slider {
+	background: #FE1251;
 	transition: .4s;
 }
 
-input.dark-mode:checked + label.slider::before {
-    background: url('images/logos/moon_logo.svg') no-repeat center;
+input.dark:checked + label.slider::before {
+    background: url('images/logos/sun_logo.png') no-repeat center;
 	background-size: 30px;
 	background-color: #fff;
 	border-radius: 25px;
 	transition: 0.4s;	
 }
 
-input.dark-mode:checked + label.slider::before {
+input.dark:checked + label.slider::before {
 	left: calc(100% - 3px);
 	transform: translateX(-100%);
 }
 
-label.slider:active::before {
+/* label.slider:active::before {
 	width: 60%;
-}
+} */
 
 
 
@@ -190,7 +257,7 @@ header .log-in {
     color: #333333;
     border: none;
     border-radius: 66px;
-    font-size: 22px;
+    font-size: 1.6vw;
     font-weight: bold;
     margin-right: 2px;
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
@@ -219,7 +286,7 @@ header .sign-up {
     background-color: #FE1251;
     border: none;
     border-radius: 66px;
-    font-size: 22px;
+    font-size: 1.6vw;
     font-weight: bold;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
 
@@ -256,7 +323,7 @@ nav {
   top: 0;
   height: 100vh;
   border-radius: 0 50px 50px 0;
-  background: linear-gradient(180deg, #FE1251 0%, #FF0045 100%);
+  background: var(--background-gradient);
   font-size: 25px;
   font-weight: 300;
 }
@@ -265,16 +332,6 @@ nav {
 nav.col-3 {
     padding: 0px;
     width: 19%;
-}
-
-nav.col-3::before {
-    content: "";
-    width: 105px;
-    height: 5px;
-    background-color: #fff;
-    position: absolute;
-    top: -5px;
-    left: 118px;
 }
 
 .nav-box {
@@ -433,10 +490,11 @@ section .gallery-section .img-box {
 }
 
 .shelves {
-    background-color: #eee;
+    background-color: var(--clr-shelves);
     height: 380px;
     border-radius: 10px;
     margin: 0 0 10px 0;
+    /* overflow: hidden; */
 }
 
 section .shelves h3.shelve-title {
@@ -445,25 +503,34 @@ section .shelves h3.shelve-title {
 }
 
 section .shelves h3 a {
-    color: var(--bs-body-color);
+    color: var(--foreground);
 }
 
 section .shelves h3.shelve-title a:hover,
 .item-cards:hover {
-    color: #000;
+    color: var(--clr-font-hover);
 }
 
 .item-cards {
     width: 19.5%;
     height: 87%;
     border-radius: 10px;
-    background: #FFF;
-    box-shadow: 0px 3px 10px #00000040;
+    background: #fff;
+    box-shadow: var(--clr-box-shadow);
     margin-bottom: 5px;
     /* position: relative; */
     padding: 0;
-    color: #434544;
+    color: var(--clr-font);
     text-align: center;
+    transition: all .2s;
+
+    background: var(--clr-background);
+}
+
+.item-cards:hover {
+    box-shadow: var(--clr-box-shadow-hover);
+    transition: all .2s;
+
 }
 
 .item-cards:hover .item-description {
@@ -471,7 +538,9 @@ section .shelves h3.shelve-title a:hover,
 }
 
 .item-cards:active {
-    box-shadow: none;  
+    box-shadow: none;
+    transform: scale(.96);
+    transition: all .2s;
 }
 
 div.item-description h4 {
@@ -498,19 +567,19 @@ div.item-description h5 {
 
 
 h5 span.price {
-    color: #000;
+    color: var(--clr-black-white);
     font-weight: bold;
     font-size: 24px;
 }
 
 h5 span.currency {
-    color: #000;
+    color: var(--clr-black-white);
     font-weight: 700;
     font-size: 14px;
 }
 
 h5 span.week {
-    color: #434544;
+    color: var(--clr-font);
     font-weight: 400;
     font-size: 14px;
     
@@ -521,7 +590,7 @@ div.img-of-item {
     width: 100%;
     border-radius: 10px 10px 0 0;
     overflow: hidden;
-    padding: 5px;
+    padding: 4px;
 }
 
 div.img-of-item img {
@@ -539,7 +608,8 @@ div.img-of-item img {
     width: 100%;
     height: 25%;
     border-radius: 0 0 10px 10px;
-    background-color: #fff;
+    /* background-color: #fff; */
+
     /* background-color: #ECF3F9; */
     /* transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1) 0s; */
     /* background: rgb(255 255 255 / 20%); */
@@ -580,8 +650,8 @@ div.img-of-item img {
     margin-top: 15px;
     font-weight: 500;
     background: none;
-    color: var(--bs-body-color);
-    border: 1px solid #434544;
+    color: var(--clr-font);
+    border: 1px solid var(--clr-font);
     border-radius: 3px;
     padding: 0;
     position: relative;
@@ -592,7 +662,6 @@ div.img-of-item img {
     border-color: var(--bs-body-color);
     color: #fff;
     transition: all 0.1s;
-
 }
 
 .big-more-btn button:before {
@@ -603,7 +672,8 @@ div.img-of-item img {
     left: -1px;
     width: calc(100% + 2px);
     height: 0%;
-    background: #434544;
+    border-radius: 3px;
+    background: var(--clr-btn);
     transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 2);
 
 }
@@ -988,10 +1058,14 @@ footer {
 
 footer table th {
     color: #000;
+    font-size: 18px;
+    font-weight: 700;
+    user-select: none;
 }
 
 footer table a {
     color: var(--bs-body-color);
+    font-weight: 500;
 }
 
 footer table a:hover {
@@ -1182,12 +1256,14 @@ footer .lang-loc-app a:hover path.apple-app-logo {
 }
 
 .contact a {
-    color: #000;
+    color: var(--bs-body-color);
+    font-weight: 500;
     user-select: auto;
 }
 
 .contact a:hover {
     text-decoration: underline;
+    color: #000;
 }
 
 .contact svg {
