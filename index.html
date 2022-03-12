@@ -13,7 +13,8 @@
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
     <meta name="description" content="Rent your favorite electronics & try high tech before everyone.">
-    <meta name="keywords" content="rent, lease, electronics, apple, iphone, iphone pro max, apple watch, pro, max, mac, macbook, macbook pro, macbook air, ipad, ipad pro, imac, samsung, galaxy, z flip, z fold, note, ultra, FE, samsung watch, tab, tablet, canon, EOS, canon eos, nikon, sony alpha, dslr, sony, playstation, playstation 5, ps5, playstation VR VR, dualsense, dualsense controller, fifa, call of duty, battlefield, google, google pixel, google pixel pro, nintendo, nintendo switch, nintendo switch lite, nintendo switch oled, smart watch, huawei, huawei tablet, huawei watch, gopro, gopro hero, gopro max, gopro camera, dell, dell alienware, dell xps, dell vostro, hp, hp pavilion, hp envy, lenovo, lenovo yoga, lenovo thinkpad, acer, acer aspire, acer nitro, acer predator">
+    <meta name="keywords"
+        content="rent, lease, electronics, apple, iphone, iphone pro max, apple watch, pro, max, mac, macbook, macbook pro, macbook air, ipad, ipad pro, imac, samsung, galaxy, z flip, z fold, note, ultra, FE, samsung watch, tab, tablet, canon, EOS, canon eos, nikon, sony alpha, dslr, sony, playstation, playstation 5, ps5, playstation VR VR, dualsense, dualsense controller, fifa, call of duty, battlefield, google, google pixel, google pixel pro, nintendo, nintendo switch, nintendo switch lite, nintendo switch oled, smart watch, huawei, huawei tablet, huawei watch, gopro, gopro hero, gopro max, gopro camera, dell, dell alienware, dell xps, dell vostro, hp, hp pavilion, hp envy, lenovo, lenovo yoga, lenovo thinkpad, acer, acer aspire, acer nitro, acer predator">
 
     <!-- Facebook open graph -->
     <meta property="og:url" content="" />
@@ -31,7 +32,9 @@
     <!-- Google Fonts File -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aclonica&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
 
     <!-- Website icon -->
     <link rel="shortcut icon" type="image/ico" href="flamingo.ico">
@@ -50,40 +53,41 @@
 <body ondragstart="return false;">
 
     <!-- Start header -->
-    <header class="container-fluid">
-        <div class="head row justify-content-between align-items-center flex-nowrap">
-            
-            <div class="logo col-3">
+    <header>
+        <div class="container-box">
+            <!-- Website Logo -->
+            <div class="logo">
                 <a class="logo-link" href="#">Flamingo</a>
             </div>
-
-            <div class="search-box col-6">
+            <!-- Search Box -->
+            <div class="search-box">
                 <div class="search-div">
-                    <form class="search-form" autocomplete="off" action="/" method="get">
-                        <input class="input-search" type="search" id="search" value placeholder="Search"
-                            autocomplete="false" name="hidden" style="width: 200px;">
+                    <form autocomplete="off" action="" method="get">
+                        <input class="input-search" type="search" value placeholder="Search"
+                            autocomplete="off" name="hidden" autofill="off">
                     </form>
                 </div>
                 <div class="search-icon">
-                    <svg width="29" height="30" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="29" height="30" viewBox="0 0 29 30" fill="none">
                         <path
                             d="M19.7375 18L28.2564 26.5188C29.0123 27.2748 29.0123 28.5004 28.2564 29.2563C27.5004 30.0123 26.2748 30.0123 25.5189 29.2563L17.0001 20.7375L19.7375 18Z"
-                            fill="#333333" />
-                        <circle cx="11.5" cy="11.5" r="10.5" stroke="#333333" stroke-width="2" />
+                            fill="currentColor" />
+                        <circle cx="11.5" cy="11.5" r="10.5" stroke="currentColor" stroke-width="2" />
                     </svg>
                 </div>
             </div>
-
-            <div class="btn-box text-nowrap col-3">
-
+            <!-- Three Button (Darkmode, Login, & Sign up) -->
+            <div class="btn-box text-nowrap">
+                <!-- Darkmode Button -->
                 <div class="dark-box">
-                    <input type="checkbox" class="dark dark-mode-toggle" id="dark-mode-toggle">
+                    <input type="checkbox" class="dark dark-mode-toggle" id="dark-mode-toggle" checked>
                     <label class="slider" for="dark-mode-toggle"></label>
                 </div>
-
+                <!-- Login Button -->
                 <a href="#">
                     <button type="button" class="log-in btn btn-primary">Log in</button>
                 </a>
+                <!-- Sign up Button -->
                 <a href="#">
                     <button type="button" class="sign-up btn btn-primary">Sign up</button>
                 </a>

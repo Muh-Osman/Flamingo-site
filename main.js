@@ -1,4 +1,13 @@
-// Dark Mode
+// Outline for Search box on DarkMode
+const parent = document.querySelector('.search-box')
+const input = document.querySelector('.input-search')
+
+input.addEventListener('focus', () => parent.style.outline = "var(--search-input-outline)")
+input.addEventListener('blur', () => parent.style.outline = "none")
+
+
+
+// Save and toggle (Dark Mode & Check box) in local storage
 // check for saved 'darkMode' in localStorage
 let darkMode = localStorage.getItem('darkMode');
 
