@@ -148,30 +148,24 @@ header .logo-link:hover {
 
 /* Small screen (phones, less than 576px) */
 @media (max-width: 576px) {
-    header .btn-box label.slider {
+    header .btn-box .dark-box {
         display: none !important;
     }
-    header .container-box{
-        /* flex-wrap: wrap; */
-    }
-    header .logo {
-        /* order: 1;
-        flex-basis: 30%;
-        margin-right: 0; */
-    }
     header .logo a {
-        /* font-size: calc(3.6vw + 24px); */
+        font-size: 7.6vw;
     }
-    header div.btn-box {
-        /* order: 2;
-        flex-basis: 60%;
-        margin: 0 !important; */
+}
+
+/* X-Small screen (phones, less than 400px) */
+@media (max-width: 400px) {
+    /* header button.log-in {
+        width: 15vw !important;
+        height: ;
     }
-    header .search-box {
-        /* order: 3;
-        flex-basis: 100% !important;
-        margin-top: 12px; */
-    }
+    header button.sign-up {
+        width: 15vw !important;
+        height: ;
+    } */
 }
 
 /* Search Box */
@@ -256,6 +250,7 @@ header .search-icon:hover svg {
 header div.btn-box {
     flex: 1;
     margin-left: 12px;
+    white-space: nowrap;
 }
 
 /* Dark Mode Toggle */
