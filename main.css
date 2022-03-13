@@ -12,12 +12,21 @@ body {
     --clr-svg-search-icon: #333;
     --clr-svg-search-icon-hover: #000;
     --search-input-outline: none;
+    --clr-login-background: #fff;
+    --clr-login-background-hover: transparent;
+    --clr-login-font-hover: #000;
+    --clr-login-font: #333;
+    --clr-signup-background: #FE1251;
+    --clr-signup-font: #fff;
     --clr-shelves: #eee;
-
-
-    --clr-font: #212529;
+    --clr-font: #3f3f42;
     --clr-font-hover: #000;
     --clr-black-white: #000;
+    
+
+
+
+
     --clr-light: #fff;
     --clr-dark: #eee;
     --clr-light-dark: #292929;
@@ -39,14 +48,20 @@ body {
     --clr-svg-search-icon: #fff;
     --clr-svg-search-icon-hover: #fff;
     --search-input-outline: 1px solid #8b12fc;
+    --clr-login-background: transparent;
+    --clr-login-background-hover: #fff;
+    --clr-login-font-hover: #000;
+    --clr-login-font: #fff;
+    --clr-signup-background: #FE1251;
+    --clr-signup-font: #fff;
     --clr-shelves: #292929;
-
-
-
-
     --clr-font: #D9D9D9;
     --clr-font-hover: #FFF;
     --clr-black-white: #fff;
+
+
+
+
     --clr-light: #fff;
     --clr-dark: #121212;
     --clr-light-dark: #292929;
@@ -107,30 +122,28 @@ header .logo-link:hover {
 }
 
 /* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
-header .container-box{
-    flex-wrap: wrap;
-}
-header .logo {
-    order: 1;
-    flex-basis: 50%;
-    margin-right: 0;
-}
-
-header .logo a {
-    font-size: calc(3.6vw + 24px);
-}
-
-header div.btn-box {
-    order: 2;
-    flex-basis: 50%;
-    margin: 0 !important;
-}
-header .search-box {
-    order: 3;
-    flex-basis: 100% !important;
-    margin-top: 12px;
-}
+@media (max-width: 768px) {
+    header .container-box{
+        flex-wrap: wrap;
+    }
+    header .logo {
+        order: 1;
+        flex-basis: 33%;
+        margin-right: 0;
+    }
+    header .logo a {
+        font-size: calc(3.6vw + 24px);
+    }
+    header div.btn-box {
+        order: 2;
+        flex-basis: 67%;
+        margin: 0 !important;
+    }
+    header .search-box {
+        order: 3;
+        flex-basis: 100% !important;
+        margin-top: 12px;
+    }
 }
 
 /* Search Box */
@@ -221,10 +234,7 @@ header div.btn-box {
 header .btn-box .dark-box {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-
-    /* flex-shrink: 0; */
-    /* flex-grow: 1; */
+    justify-content: center;
 }
 
 header .btn-box input.dark {
@@ -236,10 +246,8 @@ header .btn-box input.dark {
 header .btn-box label.slider {
 	cursor: pointer;
 	text-indent: -9999px;
-	/* width: 90px; */
+	width: 90px;
 	height: 45px;
-    width: 6.5vw;
-	/* height: 1vwpx; */
 	display: block;
 	border-radius: 45px;
 	position: relative;
@@ -260,7 +268,6 @@ header label.slider::before {
 	height: 39px;
     background: url('images/logos/moon_logo.svg') no-repeat center;
 	background-size: 30px;
-	background-color: #fff;
 	border-radius: 25px;
 	transition: 0.4s;
 }
@@ -271,11 +278,15 @@ header input.dark:checked:hover + label.slider {
 }
 
 header input.dark:checked + label.slider::before {
-    background: url('images/logos/sun_logo.png') no-repeat center;
+    background: url('images/logos/sun_logo.svg') no-repeat center;
 	background-size: 30px;
-	background-color: #fff;
 	border-radius: 25px;
 	transition: 0.4s;	
+}
+
+header input.dark:checked + label.slider:hover::before,
+header label.slider:hover::before {
+    background-color: #fff;
 }
 
 header input.dark:checked + label.slider::before {
@@ -283,80 +294,63 @@ header input.dark:checked + label.slider::before {
 	transform: translateX(-100%);
 }
 
-/* label.slider:active::before {
+header label.slider:active::before {
 	width: 60%;
-} */
-
-
-
-
+}
 
 
 /* Log in & Sign up Button */
-header .btn-box {
+header div.btn-box {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
-header .log-in {
-    background-color: transparent;
-    color: #333333;
-    border: none;
-    border-radius: 66px;
-    font-size: 1.6vw;
+header button.log-in {
+    height: 45px;
+    width: 90px;
+    padding: 0;
+    font-size: 22px;
     font-weight: bold;
-    margin-right: 2px;
+    color: var(--clr-login-font);
+    background-color: var(--clr-login-background);
+    border: none;
+    border-radius: 50px;
+    margin: 0 5px;
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-
 }
 
-header .log-in:hover {
-    background-color: transparent;
-    color: #000;
-    box-shadow: rgba(0, 0, 0, 0.13) 0px 7px 15px, rgb(0 0 0 / 5%) 0px 0px 3px;
-    
-}
-
-header a  button.log-in.btn-primary:focus {
-    background-color: transparent;
-    color: #000;
+header button.log-in:hover {
+    color: var(--clr-login-font-hover);
+    background-color: var(--clr-login-background-hover);
     box-shadow: rgba(0, 0, 0, 0.13) 0px 7px 15px, rgb(0 0 0 / 5%) 0px 0px 3px;
 }
 
-header a  button.log-in.btn-primary:active {
+header button.log-in:active {
     box-shadow: none;
-    color: #333;
 }
 
 header .sign-up {
-    background-color: #FE1251;
-    border: none;
-    border-radius: 66px;
-    font-size: 1.6vw;
+    height: 45px;
+    width: 99px;
+    padding: 0;
+    font-size: 22px;
     font-weight: bold;
+    color: var(--clr-signup-font);
+    background-color: var(--clr-signup-background);
+    border: none;
+    border-radius: 50px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-
-    
 }
 
 header .sign-up:hover {
-    background-color: #fff;
     color: #000;
+    background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.13) 0px 7px 15px, rgb(0 0 0 / 5%) 0px 0px 3px;
-
 }
 
-header .sign-up:focus {
-    background-color: #fff;
-    color: #000;
-    box-shadow: rgba(0, 0, 0, 0.13) 0px 7px 15px, rgb(0 0 0 / 5%) 0px 0px 3px;
-
-}
-
-header a  button.sign-up.btn-primary:active {
+header button.sign-up:active {
     box-shadow: none;
-    color: #333;
 }
 /* End header */
 
@@ -631,7 +625,7 @@ h5 span.currency {
 
 h5 span.week {
     color: var(--clr-font);
-    font-weight: 400;
+    font-weight: 500;
     font-size: 14px;
     
 }

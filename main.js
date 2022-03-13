@@ -21,23 +21,39 @@ function load() {
 }
 
 const enableDarkMode = () => {
+    // Delay a function
+    setTimeout(function () {
     // 1. Add the class to the body
-    document.body.classList.add('darkmode');
+        document.body.classList.add('darkmode');
+    }, 400);
+
     // 2. Update darkMode in localStorage
     localStorage.setItem('darkMode', 'enabled');
 }
 
 const disableDarkMode = () => {
-    // 1. Remove the class from the body
-    document.body.classList.remove('darkmode');
+    // Delay a function 
+    setTimeout(function () {
+        // 1. Remove the class from the body
+        document.body.classList.remove('darkmode');
+    }, 400);
+
     // 2. Update darkMode in localStorage 
     localStorage.setItem('darkMode', null);
+
 }
 
 // If the user already visited and enabled darkMode
 // start things off with it on
 if (darkMode === 'enabled') {
-    enableDarkMode();
+
+    // Delay a function
+    setTimeout(function () {
+
+        enableDarkMode();
+        
+    }, 400); 
+
 }
 
 // When someone clicks the button
