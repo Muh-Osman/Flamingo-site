@@ -156,8 +156,8 @@ header .logo-link:hover {
     }
 }
 
-/* X-Small screen (phones, less than 400px) */
-@media (max-width: 400px) {
+/* X-Small screen (phones, less than 360px) */
+@media (max-width: 360) {
     /* header button.log-in {
         width: 15vw !important;
         height: ;
