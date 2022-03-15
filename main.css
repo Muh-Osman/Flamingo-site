@@ -77,6 +77,27 @@ body {
 
 }
 
+/* Scrollbar Width */
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+/* Scrollbar Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+ 
+/* Scrollbar Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+    height: 33vh;
+}
+
+/* Scrollbar Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 ::selection {
     background-color: #FF557A;
     color: #fff;
@@ -255,7 +276,7 @@ header input.dark:checked:hover + label.slider {
 
 header input.dark:checked + label.slider::before {
     background: url('images/logos/sun_logo.svg') no-repeat center;
-	background-size: 30px;
+	background-size: 37px;
 	border-radius: 25px;
 	transition: 0.4s;	
 }
@@ -267,11 +288,7 @@ header label.slider:hover::before {
 
 header input.dark:checked + label.slider::before {
 	right: calc(100% - 3px);
-	transform: translateX(100%);
-}
-
-header label.slider:active::before {
-	width: 60%;
+	transform: translateX(100%) rotate(-90deg);
 }
 
 
@@ -340,7 +357,7 @@ header button.sign-up:active {
         margin-right: 0;
     }
     header .logo a {
-        font-size: calc(3.6vw + 24px);
+        font-size: calc(3.6vw + 17px);
     }
     header div.btn-box {
         order: 2;
@@ -355,47 +372,77 @@ header button.sign-up:active {
 
 /* Small screen (phones, less than 576px) */
 @media (max-width: 576px) {
-    header .btn-box .dark-box {
+    header .btn-box .signup-link {
         display: none;
     }
-    header .logo a {
-        font-size: 7.6vw;
+    header .btn-box .log-in {
+    margin-right: 0;
+    margin-left: clamp(5px, 1.5vw, 10px);
+    color: var(--clr-signup-font);
+    background-color: var(--clr-signup-background);
     }
+    header .logo a {
+        font-size: 10vw;
+    }
+    header .btn-box label.slider {
+        width: 39px;
+        height: 39px;
+    }
+    header label.slider::before{
+        top: 0;
+        right: 0;
+    }
+    header input.dark:checked + label.slider::before {
+	    right: 0;
+	    transform: translateX(0%) rotate(-90deg);
+    }
+    header input.dark:checked + label.slider:hover::before,
+    header input.dark:checked:hover + label.slider,
+    header label.slider:hover::before,
+    header label.slider:hover {
+        background-color: transparent;
+    }
+    header input.dark:not(:checked) + label.slider:hover::before {
+        background-color: #fff;
+    }
+
 }
 
 /* X-Small screen (phones, less than 359px) */
 @media (max-width: 359px) {
-    header button.log-in,
-    header button.sign-up {
-        width: fit-content;
-        height: fit-content;
-        padding: 5px;
+    header button.log-in {
+        width: fit-content !important;
+        height: fit-content !important;
+        padding: 2vw 5.5vw;
         font-size: 6vw;
         margin: 0;
     }
+    header .dark-box {
+        display: none !important;
+    }
+
 }
 /* End header */
 
 /* Start nav bar */
 section.body-site {
+    padding-left: 0;
 }
 
 nav {
-  position: sticky;
-  z-index: 99;
-  top: 0;
-  height: 100vh;
-  border-radius: 0 50px 50px 0;
-  background: var(--background-gradient);
-  font-size: 25px;
-  font-weight: 300;
+    position: sticky;
+    z-index: 99;
+    top: 0;
+    height: 100vh;
+    border-radius: 0 50px 50px 0;
+    background: var(--background-gradient);
+    font-size: 25px;
+    font-weight: 300;
+    padding: 0px;
+    width: 19% !important; /* Edit Nav Width */
+
 }
 
-/* Edit Nav Width */
-nav.col-3 {
-    padding: 0px;
-    width: 19%;
-}
 
 .nav-box {
     padding: 0px 10px 0px 10px;
