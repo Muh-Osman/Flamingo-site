@@ -18,21 +18,21 @@ body {
     --clr-login-font: #333;
     --clr-signup-background: #FE1251;
     --clr-signup-font: #fff;
-    --clr-shelves: #eee;
+    --clr-shelves: #f1f1f1;
     --clr-font: #3f3f42;
     --clr-font-hover: #000;
     --clr-black-white: #000;
+    --background-nav-gradient: linear-gradient(180deg, #FE1251 0%, #FF0045 100%);
     
 
 
 
 
     --clr-light: #fff;
-    --clr-dark: #eee;
+    --clr-dark: #f1f1f1;
     --clr-light-dark: #292929;
     --clr-box-shadow: 0px 3px 10px #00000040;
     --clr-box-shadow-hover: 0px 3px 10px #00000040;
-    --background-gradient: linear-gradient(180deg, #FE1251 0%, #FF0045 100%);
     --clr-btn: #434544;
 
     --foreground: var(--clr-font);
@@ -55,9 +55,10 @@ body {
     --clr-signup-background: #FE1251;
     --clr-signup-font: #fff;
     --clr-shelves: #292929;
-    --clr-font: #D9D9D9;
+    --clr-font: #e7e9ea;
     --clr-font-hover: #FFF;
     --clr-black-white: #fff;
+    --background-nav-gradient: var(--clr-shelves);
 
 
 
@@ -67,7 +68,6 @@ body {
     --clr-light-dark: #292929;
     --clr-box-shadow: none;
     --clr-box-shadow-hover: 0px 0px 8px -1px #ffffff;
-    --background-gradient: #292929;
     --clr-btn: #292929;
 
 
@@ -82,15 +82,15 @@ body {
     width: 20px;
 }
 
+/* Scrollbar Handle */
+::-webkit-scrollbar-thumb {
+    height: 33vh;
+    background: #888; 
+}
+
 /* Scrollbar Track */
 ::-webkit-scrollbar-track {
     background: #f1f1f1; 
-}
- 
-/* Scrollbar Handle */
-::-webkit-scrollbar-thumb {
-    background: #888; 
-    height: 33vh;
 }
 
 /* Scrollbar Handle on hover */
@@ -431,16 +431,15 @@ section.body-site {
 
 nav {
     position: sticky;
-    z-index: 99;
     top: 0;
+    z-index: 999;
     height: 100vh;
-    border-radius: 0 50px 50px 0;
-    background: var(--background-gradient);
     font-size: 25px;
     font-weight: 300;
-    padding: 0px;
-    width: 19% !important; /* Edit Nav Width */
+    border-radius: 0 50px 50px 0;
 
+    background: var(--background-nav-gradient);
+    width: 258px !important; /* Edit Nav Width */
 }
 
 
@@ -467,7 +466,7 @@ section nav .mini-nav svg {
 hr {
     height: 1px;
     margin: 0 0 3px 0;
-    background-color: #eee;
+    background-color: #f1f1f1;
     border-radius: 1000px;
     opacity: 1;
 }
@@ -910,7 +909,7 @@ h2 mark {
 }
 
 .shelves-down {
-    background-color: #eee;
+    background-color: #f1f1f1;
     height: 500px;
     border-radius: 10px;
     margin: 0 0 25px 0;
@@ -1014,7 +1013,7 @@ a.item-cards-down::after {
 section .top-brands-shelve {
     height: 250px;
     margin-bottom: 25px;
-    /* background-color: #eee; */
+    /* background-color: #f1f1f1; */
 }
 
 section .top-brands-shelve h3 {
@@ -1233,7 +1232,7 @@ footer .lang-loc {
 .arabic:hover h4,
 .egypt:hover,
 .egypt:hover h4 {
-    background-color: #eee;
+    background-color: #f1f1f1;
     color: #000;
 }
 
@@ -1365,7 +1364,7 @@ footer .lang-loc-app a:hover path.apple-app-logo {
     align-items: flex-start;
     justify-content: space-evenly;
     padding-left: 20px;
-    border-left: 2px solid #eee;
+    border-left: 2px solid #f1f1f1;
 
 }
 
