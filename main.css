@@ -23,6 +23,17 @@ body {
     --clr-font-hover: #000;
     --clr-black-white: #000;
     --background-nav-gradient: linear-gradient(180deg, #FE1251 0%, #FF0045 100%);
+    --clr-mini-nav-svg-hover: #333;
+    --clr-more-btn-nav-hover: #FF0045;
+    --clr-background-more-btn-nav-hover: #fff;
+    --clr-rent-btn: #FF0045;
+    --clr-background-rent-btn: #fff;
+    --clr-rent-btn-hover: #fff;
+    --clr-background-rent-btn-hover: transparent;
+    --clr-border-rent-btn-hover: transparent;
+    --clr-border-rent-btn-hover: #fff;
+
+
     
 
 
@@ -59,6 +70,15 @@ body {
     --clr-font-hover: #FFF;
     --clr-black-white: #fff;
     --background-nav-gradient: var(--clr-shelves);
+    --clr-mini-nav-svg-hover: #FF0045;
+    --clr-more-btn-nav-hover: var(--clr-shelves);
+    --clr-background-more-btn-nav-hover: #fff;
+    --clr-rent-btn: var(--clr-shelves);
+    --clr-background-rent-btn: #fff;
+    --clr-rent-btn-hover: #fff;
+    --clr-background-rent-btn-hover: var(--clr-shelves);
+    --clr-border-rent-btn-hover: #8b12fc;
+
 
 
 
@@ -145,7 +165,7 @@ header .logo-link:hover {
 /* Search Box */
 header .search-box {
     display: flex;
-    flex: 3;
+    flex: 2;
     align-items: center;
     justify-content: space-between;
     padding: 0px 20px;
@@ -429,28 +449,57 @@ section.body-site {
     padding-left: 0;
 }
 
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    height: 100vh;
-    font-size: 25px;
-    font-weight: 300;
-    border-radius: 0 50px 50px 0;
-
-    background: var(--background-nav-gradient);
-    width: 258px !important; /* Edit Nav Width */
+section div.body-row {
+    margin-left: 0;
 }
 
+section nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    height: 100vh;
+    padding: 0 !important;
+    border-radius: 0 50px 50px 0;
+    background: var(--background-nav-gradient);
+    width: 18.5% !important; /* Edit Nav Width */
+}
 
-.nav-box {
-    padding: 0px 10px 0px 10px;
+section .nav-box {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items:stretch;
+    justify-content: space-between;
 }
 
 section nav .mini-nav {
-    text-align: center;
-    padding: 0 5px;
-    margin: 0;
+    margin: 0 10px;
+    border-bottom: 1px solid #FFF;
+}
+
+section .mini-nav div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 25%;
+    height: 45px;
+}
+
+section .mini-nav div svg {
+    height: 27px;
+    width: 27px;
+    fill: #fff;
+    transition: .2s;
+}
+
+section .mini-nav div a:hover svg {
+    fill: var(--clr-mini-nav-svg-hover);
+    transform: scale(1.1);
+    transition: .2s;
 }
 
 section nav .mini-nav a{
@@ -458,44 +507,58 @@ section nav .mini-nav a{
     margin: 0;
 }
 
-section nav .mini-nav svg {
-    transform: scale(.7);
+/* Start Nav Categories */
+section nav .categories-box {
+    padding: 0 8px 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
 }
 
-/* horizon line customize */
-hr {
-    height: 1px;
-    margin: 0 0 3px 0;
-    background-color: #f1f1f1;
-    border-radius: 1000px;
-    opacity: 1;
+section nav .categories-box div {
+    padding: 0;
 }
 
-
-section div nav a {
+section nav .categories-box a {
+    font-size: 1.9vw;
+    font-weight: 300;
     color: #fff;
-    cursor: pointer;
-    padding: 7px;
-    /* height: calc(100vh / 12); */
+    padding: 5px 15px;
+    border-radius: 50px;
+    margin: 0 !important;
+    /* height: calc(100vh / 11); */
     transition: all 0.1s;
 
 }
 
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
+    .text {
+        display: none;
+    }
+    section nav {
+        /* width: 8% !important; */
+    }
+
 }
 
-section div nav a:hover {
+section nav .categories-box a:hover {
     background-color: #FF557A;
-    border-radius: 50px;
-    color: #fff;
 }
 
-section div nav a.active {
-    font-size: 25px;
+section nav a.active {
     font-weight: bold;
     background-color: #FF557A;
-    border-radius: 50px;
+}
+
+section nav .categories-box .cat {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1vw;
 }
 
 svg.big-nav-icon {
@@ -504,51 +567,70 @@ svg.big-nav-icon {
 }
 
 /* More Button */
+section nav .more-btn-nav-box {
+    width: 100%;
+    align-self: center;
+    padding: 0 8px !important;
+}
+
 section div nav a.more {
     font-size: 18px;
     font-weight: 300;
     border: 1px solid #fff;
     border-radius: 3px;
+    padding: 0;
     justify-content: center;
     align-content: center;
-    margin: 15px auto 0;
-    height: 25px;
-    padding: 0;
+    align-items: center;
+
+    /* margin: 15px auto 0; */
+    /* height: 25px; */
 }
 
 section div nav a.more:hover {
-    border-radius: 0px;
+    color: var(--clr-more-btn-nav-hover);
+    font-weight: 600;
+    background-color: var(--clr-background-more-btn-nav-hover);
 }
 
 /* Rent Button */
-section nav a.rent-btn-box {
-    padding: 0;
-    width: 95%;
-    margin: 27px auto;
+section nav .rent-btn-nav-box {
+    width: 100%;
+    align-self: center;
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
 }
 
-section nav a button.rent-btn {
-    border: none;
+section nav a.rent-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 0;
-    height: 50px;
-    border-radius: 50px;
-    color: var(--bs-body-color);
-    background-color: #fff;
+    width: 85%;
+    margin: 27px auto;
     font-size: 40px;
     font-weight: bold;
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-
+    line-height: 1.3;
+    border-radius: 50px;
+    color: var(--clr-rent-btn);
+    border: 1px solid transparent;
+    background-color: var(--clr-background-rent-btn);
+    transition: 0.2s;
 }
 
-a button.rent-btn:hover {
-    background-color: var(--bs-body-color);
-    color: #fff;
+section nav a.rent-btn:hover {
+    color: var(--clr-rent-btn-hover);
+    border: 1px solid var(--clr-border-rent-btn-hover);
+    background-color: var(--clr-background-rent-btn-hover);
 }
 
 /* Start Gallery */
 section .gallery-section {
     padding: 0;
-    width: 81%
+    width: 81.5%
 }
 
 section .gallery-section .img-box {
