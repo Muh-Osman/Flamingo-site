@@ -23,7 +23,7 @@ function load() {
 const enableDarkMode = () => {
     // Delay a function
     setTimeout(function () {
-    // 1. Add the class to the body
+        // 1. Add the class to the body
         document.body.classList.add('darkmode');
     }, 400);
 
@@ -51,13 +51,15 @@ if (darkMode === 'enabled') {
     setTimeout(function () {
 
         enableDarkMode();
-        
-    }, 400); 
+
+    }, 400);
 
 }
 
 // When someone clicks the button
 darkModeToggle.addEventListener('change', () => {
+
+    navigator.vibrate(200); // vibrate for 200ms
 
     // set checked input in LocalStorage if User click on it
     localStorage.setItem('dark-mode-toggle', darkModeToggle.checked);
