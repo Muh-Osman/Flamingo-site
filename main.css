@@ -1245,6 +1245,10 @@ a.nintendo:hover svg path.back {
 
 
 /* Footer */
+table {
+  empty-cells: hide;
+}
+
 footer {
     height: 391px;
     background: linear-gradient(123.76deg, #E137C4 33.38%, #5A89E7 78.78%);

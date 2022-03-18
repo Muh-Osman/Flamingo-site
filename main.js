@@ -59,7 +59,7 @@ if (darkMode === 'enabled') {
 // When someone clicks the button
 darkModeToggle.addEventListener('change', () => {
 
-    navigator.vibrate(100); // vibrate for 100ms
+    navigator.vibrate(50); // vibrate for 50ms
 
     // set checked input in LocalStorage if User click on it
     localStorage.setItem('dark-mode-toggle', darkModeToggle.checked);
