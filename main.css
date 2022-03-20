@@ -757,6 +757,16 @@ section nav a.rent-btn-icon svg:hover {
 
 }
 
+/* max screen mobile width */
+@media (max-width: 450px) {
+    section nav {
+        display: none;
+    }
+    section section.gallery-section {
+        width: 100% !important;
+    }
+}
+
 /* Start Gallery */
 section .gallery-section {
     padding: 0;
