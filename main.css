@@ -757,8 +757,8 @@ section nav a.rent-btn-icon svg:hover {
 
 }
 
-/* max screen mobile width */
-@media (max-width: 450px) {
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 768px) {
     section nav {
         display: none;
     }
