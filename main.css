@@ -32,6 +32,9 @@ body {
     --clr-background-rent-btn-hover: transparent;
     --clr-border-rent-btn-hover: transparent;
     --clr-border-rent-btn-hover: #fff;
+    --clr-rent-btn-icon: #fff;
+    --clr-rent-btn-icon-hover: #000;
+
 
 
     
@@ -78,6 +81,9 @@ body {
     --clr-rent-btn-hover: #fff;
     --clr-background-rent-btn-hover: var(--clr-shelves);
     --clr-border-rent-btn-hover: #8b12fc;
+    --clr-rent-btn-icon: #FF0045;
+    --clr-rent-btn-icon-hover: #fff;
+
 
 
 
@@ -529,6 +535,72 @@ section nav .mini-nav a{
     margin: 0;
 }
 
+section nav .mini-nav .nine-dots-box {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: none; /* display: flex in media query */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+section nav .mini-nav .nine-dots-box .drop-list {
+    height: 0;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+section nav .mini-nav .nine-dots {
+    width: fit-content;
+    height: fit-content;
+}
+
+section nav .mini-nav .nine-dots-box:hover .drop-list {
+    height: 180px;
+}
+
+section nav .mini-nav .nine-dots-box .nine-dots svg .group-one {
+    transition: 150ms 150ms;
+}
+
+section nav .mini-nav .nine-dots-box .nine-dots svg .group-two {
+    transition: 150ms 75ms;
+}
+
+section nav .mini-nav .nine-dots-box .nine-dots svg .group-three {
+    transition: 150ms 0ms;
+}
+
+section nav .mini-nav .nine-dots-box:hover .nine-dots svg .group-one{
+    fill: var(--clr-mini-nav-svg-hover);
+    transform-origin: center;
+    transform: scale(1.2);
+    transition: 150ms 0ms;
+}
+
+section nav .mini-nav .nine-dots-box:hover .nine-dots svg .group-two{
+    fill: var(--clr-mini-nav-svg-hover);
+    transform: scale(1.2);
+    transform-origin: center;
+    transition: 150ms 75ms;
+}
+
+section nav .mini-nav .nine-dots-box:hover .nine-dots svg .group-three{
+    fill: var(--clr-mini-nav-svg-hover);
+    transform: scale(1.2);
+    transform-origin: center;
+    transition: 150ms 150ms;
+}
+
+
 /* Start Nav Categories */
 section nav .categories-box {
     padding: 0 8px 20px;
@@ -553,29 +625,6 @@ section nav .categories-box a {
     margin: 0 !important;
     /* height: calc(100vh / 11); */
     transition: all 0.1s;
-
-}
-
-/* Small Screen Laptop (13 inch laptop, less than 1279px) */
-@media (max-width: 1279px) {
-    .text {
-        display: none;
-    }
-    section nav {
-        width: 75px !important;
-        border-radius: 0 15px 15px 0;
-    }
-    section .gallery-section {
-        width: calc(100% - 75px) !important;
-    }
-    section nav .categories-box{
-        align-items: center !important;
-        padding: 0 0 20px;
-    }
-    section nav .categories-box a  {
-        border-radius: 5px;
-    }
-
 }
 
 section nav .categories-box a:hover {
@@ -615,9 +664,9 @@ section div nav a.more {
     justify-content: center;
     align-content: center;
     align-items: center;
+    height: 26px;
 
     /* margin: 15px auto 0; */
-    /* height: 25px; */
 }
 
 section div nav a.more:hover {
@@ -637,7 +686,7 @@ section nav .rent-btn-nav-box {
     margin-top: 20px;
 }
 
-section nav a.rent-btn {
+section nav a.rent-btn-text {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -654,10 +703,58 @@ section nav a.rent-btn {
     transition: 0.2s;
 }
 
-section nav a.rent-btn:hover {
+section nav a.rent-btn-text:hover {
     color: var(--clr-rent-btn-hover);
     border: 1px solid var(--clr-border-rent-btn-hover);
     background-color: var(--clr-background-rent-btn-hover);
+}
+
+section nav a.rent-btn-icon {
+    display: none;
+    width: 100%;
+    fill: var(--clr-rent-btn-icon);
+}
+
+section nav a.rent-btn-icon:hover {
+    background-color: transparent;
+}
+
+section nav a.rent-btn-icon svg:hover {
+    fill: var(--clr-rent-btn-icon-hover);
+}
+
+
+/* Small Screen Laptop under 13 inch (less than 1279px) */
+@media (max-width: 1279px) {
+    section nav .mini-nav .nine-dots-box {
+        display: flex;
+    }
+    section nav .mini-nav .four-mini-nav,
+    section nav .categories-box .text {
+        display: none;
+    }
+    section nav {
+        width: 78px !important;
+        border-radius: 0 15px 15px 0;
+    }
+    section .gallery-section {
+        width: calc(100% - 78px) !important;
+    }
+    section nav .categories-box{
+        align-items: center !important;
+        padding: 0 0 20px;
+    }
+    section nav .categories-box a  {
+        border-radius: 5px;
+    }
+    /* Rent Button */
+    section nav a.rent-btn-text {
+        display: none;
+    }
+    section nav a.rent-btn-icon {
+        display: block;
+    }
+
 }
 
 /* Start Gallery */

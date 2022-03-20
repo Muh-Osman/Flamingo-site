@@ -110,7 +110,8 @@
                 <div class="nav-box container-fluid">
                     <!-- Mini Notification Box -->
                     <div class="mini-nav row flex-nowrap justify-content-between align-items-center">
-                        <div class="col-3">
+                        <!-- Search icon-->
+                        <div class="col-3 four-mini-nav">
                             <a href="#">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                     <path
@@ -118,7 +119,8 @@
                                 </svg>
                             </a>
                         </div>
-                        <div class="col-3">
+                        <!-- User icon -->
+                        <div class="col-3 user four-mini-nav">
                             <a href="#">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                     <path
@@ -126,7 +128,8 @@
                                 </svg>
                             </a>
                         </div>
-                        <div class="col-3">
+                        <!-- Love icon -->
+                        <div class="col-3 four-mini-nav">
                             <a href="#">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                     <path
@@ -134,13 +137,84 @@
                                 </svg>
                             </a>
                         </div>
-                        <div class="col-3">
+                        <!-- Notification icon -->
+                        <div class="col-3 four-mini-nav">
                             <a href="#">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                     <path
                                         d="M256 32V49.88C328.5 61.39 384 124.2 384 200V233.4C384 278.8 399.5 322.9 427.8 358.4L442.7 377C448.5 384.2 449.6 394.1 445.6 402.4C441.6 410.7 433.2 416 424 416H24C14.77 416 6.365 410.7 2.369 402.4C-1.628 394.1-.504 384.2 5.26 377L20.17 358.4C48.54 322.9 64 278.8 64 233.4V200C64 124.2 119.5 61.39 192 49.88V32C192 14.33 206.3 0 224 0C241.7 0 256 14.33 256 32V32zM216 96C158.6 96 112 142.6 112 200V233.4C112 281.3 98.12 328 72.31 368H375.7C349.9 328 336 281.3 336 233.4V200C336 142.6 289.4 96 232 96H216zM288 448C288 464.1 281.3 481.3 269.3 493.3C257.3 505.3 240.1 512 224 512C207 512 190.7 505.3 178.7 493.3C166.7 481.3 160 464.1 160 448H288z" />
                                 </svg>
                             </a>
+                        </div>
+                        <!-- Three dots icon (appears only in screen under 13 inch) -->
+                        <div class="col-12 nine-dots-box">
+                            <div class="nine-dots">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                    data-testid="category-menu-icon">
+                                    <path
+                                        d="M7.58594 7.21875C7.2207 7.69336 6.64648 8 6 8C5.54883 8 5.13281 7.85156 4.79688 7.59961C4.3125 7.23438 4 6.6543 4 6C4 4.89453 4.89453 4 6 4C7.10547 4 8 4.89453 8 6C8 6.45898 7.8457 6.88281 7.58594 7.21875Z"
+                                        class="group-one"></path>
+                                    <path
+                                        d="M13.5859 7.21875C13.2207 7.69336 12.6465 8 12 8C11.5488 8 11.1328 7.85156 10.7969 7.59961C10.3125 7.23438 10 6.6543 10 6C10 4.89453 10.8945 4 12 4C13.1055 4 14 4.89453 14 6C14 6.45898 13.8457 6.88281 13.5859 7.21875Z"
+                                        class="group-one"></path>
+                                    <path
+                                        d="M19.5859 7.21875C19.2207 7.69336 18.6465 8 18 8C17.5488 8 17.1328 7.85156 16.7969 7.59961C16.3125 7.23438 16 6.6543 16 6C16 4.89453 16.8945 4 18 4C19.1055 4 20 4.89453 20 6C20 6.45898 19.8457 6.88281 19.5859 7.21875Z"
+                                        class="group-one"></path>
+                                    <path
+                                        d="M8 12C8 13.1055 7.10547 14 6 14C4.89453 14 4 13.1055 4 12C4 10.8945 4.89453 10 6 10C6.64062 10 7.21094 10.3008 7.57617 10.7695C7.8418 11.1094 8 11.5352 8 12Z"
+                                        class="group-two"></path>
+                                    <path
+                                        d="M14 12C14 13.1055 13.1055 14 12 14C10.8945 14 10 13.1055 10 12C10 10.8945 10.8945 10 12 10C12.6406 10 13.2109 10.3008 13.5762 10.7695C13.8418 11.1094 14 11.5352 14 12Z"
+                                        class="group-two"></path>
+                                    <path
+                                        d="M20 12C20 13.1055 19.1055 14 18 14C16.8945 14 16 13.1055 16 12C16 10.8945 16.8945 10 18 10C18.6406 10 19.2109 10.3008 19.5762 10.7695C19.8418 11.1094 20 11.5352 20 12Z"
+                                        class="group-two"></path>
+                                    <path
+                                        d="M7.70117 19.0527C7.89062 18.748 8 18.3867 8 18C8 16.8945 7.10547 16 6 16C4.89453 16 4 16.8945 4 18C4 19.1055 4.89453 20 6 20C6.71875 20 7.34961 19.6211 7.70117 19.0527Z"
+                                        class="group-three"></path>
+                                    <path
+                                        d="M13.7012 19.0527C13.8906 18.748 14 18.3867 14 18C14 16.8945 13.1055 16 12 16C10.8945 16 10 16.8945 10 18C10 19.1055 10.8945 20 12 20C12.7188 20 13.3496 19.6211 13.7012 19.0527Z"
+                                        class="group-three"></path>
+                                    <path
+                                        d="M19.7012 19.0527C19.8906 18.748 20 18.3867 20 18C20 16.8945 19.1055 16 18 16C16.8945 16 16 16.8945 16 18C16 19.1055 16.8945 20 18 20C18.7188 20 19.3496 19.6211 19.7012 19.0527Z"
+                                        class="group-three"></path>
+                                </svg>
+                            </div>
+
+                            <div class="drop-list">
+                                <div class="">
+                                    <a class="search-icon-drop-nav" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path
+                                            d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="">
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                            <path
+                                                d="M272 304h-96C78.8 304 0 382.8 0 480c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32C448 382.8 369.2 304 272 304zM48.99 464C56.89 400.9 110.8 352 176 352h96c65.16 0 119.1 48.95 127 112H48.99zM224 256c70.69 0 128-57.31 128-128c0-70.69-57.31-128-128-128S96 57.31 96 128C96 198.7 153.3 256 224 256zM224 48c44.11 0 80 35.89 80 80c0 44.11-35.89 80-80 80S144 172.1 144 128C144 83.89 179.9 48 224 48z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="">
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path
+                                                d="M244 84L255.1 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 0 232.4 0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84C243.1 84 244 84.01 244 84L244 84zM255.1 163.9L210.1 117.1C188.4 96.28 157.6 86.4 127.3 91.44C81.55 99.07 48 138.7 48 185.1V190.9C48 219.1 59.71 246.1 80.34 265.3L256 429.3L431.7 265.3C452.3 246.1 464 219.1 464 190.9V185.1C464 138.7 430.4 99.07 384.7 91.44C354.4 86.4 323.6 96.28 301.9 117.1L255.1 163.9z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="">
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                            <path
+                                                d="M256 32V49.88C328.5 61.39 384 124.2 384 200V233.4C384 278.8 399.5 322.9 427.8 358.4L442.7 377C448.5 384.2 449.6 394.1 445.6 402.4C441.6 410.7 433.2 416 424 416H24C14.77 416 6.365 410.7 2.369 402.4C-1.628 394.1-.504 384.2 5.26 377L20.17 358.4C48.54 322.9 64 278.8 64 233.4V200C64 124.2 119.5 61.39 192 49.88V32C192 14.33 206.3 0 224 0C241.7 0 256 14.33 256 32V32zM216 96C158.6 96 112 142.6 112 200V233.4C112 281.3 98.12 328 72.31 368H375.7C349.9 328 336 281.3 336 233.4V200C336 142.6 289.4 96 232 96H216zM288 448C288 464.1 281.3 481.3 269.3 493.3C257.3 505.3 240.1 512 224 512C207 512 190.7 505.3 178.7 493.3C166.7 481.3 160 464.1 160 448H288z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -318,13 +392,24 @@
                         </div>
 
                         
-
+                        <!-- More Button in Nav -->
                         <div class="more-btn-nav-box">
                             <a href="#" class="row more">More</a>
                         </div>
 
+                        <!-- Rent Button -->
                         <div class="rent-btn-nav-box">
-                            <a href="#" class="row rent-btn">Rent</a>
+
+                            <!-- Rent text appear in > 13 inch screen -->
+                            <a class="row rent-btn-text" href="#">Rent</a>
+
+                            <!-- Rent icon appear in < 13 inch screen -->
+                            <a class="rent-btn-icon" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">                                    <path
+                                        d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM224 368C237.3 368 248 357.3 248 344V280H312C325.3 280 336 269.3 336 256C336 242.7 325.3 232 312 232H248V168C248 154.7 237.3 144 224 144C210.7 144 200 154.7 200 168V232H136C122.7 232 112 242.7 112 256C112 269.3 122.7 280 136 280H200V344C200 357.3 210.7 368 224 368z" />
+                                </svg>
+                            </a>
+
                         </div>
                     </div>
                 </div>
@@ -760,6 +845,57 @@
 
     <!-- Most popular -->
     <section class="container-fluid">
+
+        <!-- On rise shelves -->
+        <div class="row justify-content-evenly align-items-end most-popular shelves-down">
+            <h3 class="shelve-title">
+                <a class="" href="#">On rise &#x26A1;</a>
+            </h3>
+            <a href="#" class="item-cards-down col-3">
+                <div class="img-of-item">
+                    <img src="images/product images/most popular/beats.jpg" alt="">
+                </div>
+                <div class="item-description">
+                    <h4>Beats Studio3 Wireless Over-Ear Headphones</h4>
+                    <h5><span class="price">49<span class="currency"> SAR</span></span><span class="week">/week</span>
+                    </h5>
+                </div>
+            </a>
+
+            <a href="#" class="item-cards-down col-3">
+                <div class="img-of-item">
+                    <img src="images/product images/most popular/tv.jpg" alt="">
+                </div>
+                <div class="item-description">
+                    <h4>SONY UHD 4K 120Hz QLED Smart TV, Dolby Vision HDR10+ (2022)</h4>
+                    <h5><span class="price">99<span class="currency"> SAR</span></span><span class="week">/week</span>
+                    </h5>
+                </div>
+            </a>
+
+            <a href="#" class="item-cards-down col-3">
+                <div class="img-of-item">
+                    <img src="images/product images/most popular/AirPods Prod.jpg" alt="">
+                </div>
+                <div class="item-description">
+                    <h4>Apple AirPods Pro (with MagSafe charging case)</h4>
+                    <h5><span class="price">34<span class="currency"> SAR</span></span><span class="week">/week</span>
+                    </h5>
+                </div>
+            </a>
+
+            <a href="#" class="item-cards-down col-3">
+                <div class="img-of-item">
+                    <img src="images/product images/most popular/kindle.jpg" alt="">
+                </div>
+                <div class="item-description">
+                    <h4>Kindle Paperwhite (8GB) - 6.8" display, warm light, Waterproof, Wi-Fi</h4>
+                    <h5><span class="price">49<span class="currency"> SAR</span></span><span class="week">/week</span>
+                    </h5>
+                </div>
+            </a>
+
+        </div>
 
         <!-- Most popular shelves -->
         <div class="row justify-content-evenly align-items-end most-popular shelves-down">

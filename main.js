@@ -120,3 +120,13 @@ function fillCarouselIndicator(index) {
 
 
 
+// Focus on Search input in top page onclick on search icon in drop nav
+let searchInput = document.querySelector('.input-search');
+let searchIconInNav = document.querySelector('.search-icon-drop-nav');
+
+searchIconInNav.addEventListener("click", () => {
+
+    searchInput.focus();
+    // parent define at the beginning of this page
+    parent.style.outline = "1px solid #8b12fc";
+});
