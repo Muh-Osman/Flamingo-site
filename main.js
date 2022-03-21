@@ -137,11 +137,6 @@ searchIconInNav.addEventListener("click", () => {
 let btn = document.querySelectorAll(".cat-items");
 let btnArray = Array.from(btn);
 
-
-
-
-
-
 btnArray.forEach((ele) => {
     ele.addEventListener("click", function (e) {
 
@@ -158,7 +153,7 @@ btnArray.forEach((ele) => {
         let currentLocation = location.href;
         if (activeBtn.href === currentLocation) {
             console.log("hi");
-            activeBtn.preventDefault();
+            e.preventDefault();
 
         }
         else {
