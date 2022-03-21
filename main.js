@@ -157,12 +157,8 @@ btnArray.forEach((ele) => {
         let activeBtn = document.querySelector(".active-btn");
         let currentLocation = location.href;
         if (activeBtn.href === currentLocation) {
-
             console.log("hi");
-            
-            activeBtn.onclick = function (event) {
-                event.preventDefault();
-            }
+            activeBtn.preventDefault();
 
         }
         else {
