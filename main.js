@@ -146,22 +146,13 @@ btnArray.forEach((ele) => {
         e.currentTarget.classList.add("active-btn");
 
 
-
-
-
+        // Prevent reload page when click on Nav buttons that take you to the same page you are in.
         let activeBtn = document.querySelector(".active-btn");
         let currentLocation = location.href;
+
         if (activeBtn.href === currentLocation) {
-            console.log("hi");
             e.preventDefault();
-
         }
-        else {
-            console.log("nooo");
-        }
-
-
-
 
     });
 });
