@@ -631,8 +631,8 @@ section nav .categories-box a:hover {
     background-color: #FF557A;
 }
 
-section nav a.active {
-    font-weight: bold;
+section nav a.active-btn {
+    font-weight: 400;
     background-color: #FF557A;
 }
 

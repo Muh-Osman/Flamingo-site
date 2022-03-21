@@ -130,3 +130,71 @@ searchIconInNav.addEventListener("click", () => {
     // parent define at the beginning of this page
     parent.style.outline = "1px solid #8b12fc";
 });
+
+
+
+// Add active-btn class to button onclick to Nav Categories
+let btn = document.querySelectorAll(".cat-items");
+let btnArray = Array.from(btn);
+
+
+
+
+
+
+btnArray.forEach((ele) => {
+    ele.addEventListener("click", function (e) {
+
+        btnArray.forEach((el) => {
+            el.classList.remove("active-btn");
+        })
+        e.currentTarget.classList.add("active-btn");
+
+
+
+
+
+        let activeBtn = document.querySelector(".active-btn");
+        let currentLocation = location.href;
+        if (activeBtn.href === currentLocation) {
+
+            console.log("hi");
+            
+            activeBtn.onclick = function (event) {
+                event.preventDefault();
+            }
+
+        }
+        else {
+            console.log("nooo");
+        }
+
+
+
+
+    });
+});
+
+
+
+
+
+
+
+
+
+
+// const menuItem = document.querySelectorAll('a');
+
+// const menuLength = const menuItem.length;
+
+// for (Let i = 0; i < menulength; i++) {
+    
+    //     if (menuItem[i].href === currentLocation) {
+        
+        //         menuItem[i].className = "active"
+        //     }
+        // }
+
+
+        
