@@ -1,6 +1,7 @@
 body {
     font-family: 'Roboto', sans-serif; 
     background-color: var(--clr-background);
+    accent-color: #FF0045; /* set color for: input type=checkbox, radio, range & progress */
 }
 
 :root {
@@ -610,11 +611,13 @@ section nav .categories-box {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-around;
-    overflow-x: auto;
+    overflow-y: auto;
+    overflow-x: hidden; /* Hide & remove the functionality of the scrollbar on X axis */
 }
 
-.categories-box::-webkit-scrollbar {
-    width: 0;
+section nav .categories-box::-webkit-scrollbar {
+    scrollbar-width: none;  /* Firefox */
+    display: none; /* Hide scrollbar for Chrome, Safari and Opera */
 }
 
 section nav .categories-box div {
@@ -639,6 +642,7 @@ section nav .categories-box a:hover {
 section nav a.active-btn {
     font-weight: 400;
     background-color: #FF557A;
+    transition: 0s;
 }
 
 section nav .categories-box .cat {
@@ -1676,4 +1680,97 @@ animation: shake 0.2s;
 
 .legal p {
     user-select: none;
+}
+
+
+
+
+
+
+
+
+
+.mob-phone-nav svg {
+    width: 35px;
+    height: 35px;
+}
+
+.mob-phone-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* position: fixed;
+    bottom: 0;
+    z-index: 9999; */
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.navigation ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+}
+
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.navigation ul li a .icon svg {
+    transition: .5s;
+    fill: red;
+}
+
+.navigation ul li:hover a .icon svg {
+    transform: translateY(-35px);
+}
+
+.navigation ul .text-mob-nav {
+    position: absolute;
+    color: purple;
+    font-weight: 400;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    transition: .5s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.navigation ul li:hover a .text-mob-nav{
+    opacity: 1;
+    transform: translateY(10px);
+
 }
