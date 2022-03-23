@@ -159,24 +159,13 @@ btnArray.forEach((ele) => {
 
 
 
-
-
-
-
-
-
-
-// const menuItem = document.querySelectorAll('a');
-
-// const menuLength = const menuItem.length;
-
-// for (Let i = 0; i < menulength; i++) {
-    
-    //     if (menuItem[i].href === currentLocation) {
-        
-        //         menuItem[i].className = "active"
-        //     }
-        // }
-
-
+// Mobile Navbar
+const list = document.querySelectorAll('.list');
+function activeLink(){
+    list.forEach((item) => 
+    item.classList.remove('act'));
+    this.classList.add('act');
+}
+list.forEach((item) =>
+item.addEventListener('click',activeLink));
         
