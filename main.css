@@ -35,6 +35,8 @@ body {
     --clr-border-rent-btn-hover: #fff;
     --clr-rent-btn-icon: #fff;
     --clr-rent-btn-icon-hover: #000;
+    --clr-background-mob-navbar: #FF0045;
+    --clr-indicat-border: #fff;
 
 
 
@@ -84,6 +86,10 @@ body {
     --clr-border-rent-btn-hover: #8b12fc;
     --clr-rent-btn-icon: #FF0045;
     --clr-rent-btn-icon-hover: #fff;
+    --clr-background-mob-navbar: #292929;
+    --clr-indicat-border: #121212;
+
+
 
 
 
@@ -602,6 +608,7 @@ section nav .mini-nav .nine-dots-box:hover .nine-dots svg .group-three{
 }
 
 
+
 /* Start Nav Categories */
 section nav .categories-box {
     padding: 0 8px 20px;
@@ -773,6 +780,9 @@ section nav a.rent-btn-icon svg:hover {
     }
     section section.gallery-section {
         width: 100% !important;
+    }
+    nav.mob-phone-nav {
+        display: flex !important;
     }
 }
 
@@ -1690,26 +1700,25 @@ animation: shake 0.2s;
 
 /* Mobile Navbar */
 nav.mob-phone-nav {
-    display: flex;
+    display: none; /* display flex in media query */
     align-items: center;
     justify-content: center;
-    height: 200px;
-    background-color: #222327;
-
     position: fixed;
     bottom: 0;
-    z-index: 9999;
+    z-index: 999;
+    width: 100%;
+    height: fit-content;
 }
 
 .navigation {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 400px;
+    width: 100%;
     height: 70px;
-    background-color: #fff;
     position: relative;
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
+    background-color: var(--clr-background-mob-navbar);
 }
 
 .navigation ul {
@@ -1735,18 +1744,14 @@ nav.mob-phone-nav {
     flex-direction: column;
     width: 100%;
     text-align: center;
-    font-weight: 500;
 }
 
 .navigation ul li a .icon {
     position: relative;
     display: block;
     line-height: 75px;
-    font-size: 1.5em;
     text-align: center;
-
-    transition: .5s;
-    color: #222327;
+    transition: .3s;
 }
 
 .mob-phone-nav svg {
@@ -1755,21 +1760,21 @@ nav.mob-phone-nav {
 }
 
 .navigation ul li a .icon svg {
-    transition: .5s;
-    fill: #222327;
+    transition: .3s;
+    fill: #fff;
 }
 
 .navigation ul li.act a .icon {
-    transform: translateY(-32px);
+    transform: translateY(-39px);
 }
 
 .navigation ul li a .text-mob-nav {
     position: absolute;
-    color: #222327;
-    font-weight: 700;
+    color: #fff;
+    font-weight: 500;
     font-size: 0.75em;
     letter-spacing: 0.05em;
-    transition: .5s;
+    transition: .3s;
     opacity: 0;
     transform: translateY(20px);
 }
@@ -1785,12 +1790,12 @@ nav.mob-phone-nav {
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    border: 6px solid #222327;
-    background-color: #29fd53;
-    transition: .5s;
+    border: 4px solid var(--clr-indicat-border);
+    background-color: #FF0045;
+    transition: .3s;
 }
 
-.indicat::before {
+/* .indicat::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -1800,9 +1805,9 @@ nav.mob-phone-nav {
     background-color: transparent;
     border-top-right-radius: 20px;
     box-shadow: 1px -10px 0 0 #222327;
-}
+} */
 
-.indicat::after {
+/* .indicat::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -1812,7 +1817,7 @@ nav.mob-phone-nav {
     background-color: transparent;
     border-top-left-radius: 20px;
     box-shadow: -1px -10px 0 0 #222327;
-}
+} */
 
 .navigation ul li:nth-child(1).act ~ .indicat {
     transform: translateX(calc(70px * 0));

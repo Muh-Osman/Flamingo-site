@@ -60,9 +60,7 @@ nav.mob-phone-nav {
     position: relative;
     display: block;
     line-height: 75px;
-    font-size: 1.5em;
     text-align: center;
-
     transition: .5s;
     color: #222327;
 }
