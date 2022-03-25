@@ -177,7 +177,9 @@ let mobPhoneNav = document.querySelector('.mob-phone-nav');
 let searchInputMobile = document.querySelector('.search-input-mobile');
 let searchInMobNav = document.querySelector('.search-in-mob-nav');
 let inputSearchIn = document.querySelector('.input-search-in');
+let searchIconNavMobLink = document.querySelector('.search-icon-nav-mob-link');
 
+// searchIconNavMobLink.preventDefault();
 
 searchInMobNav.addEventListener('click', pullIn);
 
@@ -187,22 +189,22 @@ function pullIn() {
         searchInputMobile.style.top = "12px";
         inputSearchIn.focus();
     } else {
+        mobPhoneNav.style.bottom = "-125px";
+        input.focus();
         window.scrollTo({
             top: 0,
             behavior: "smooth",
         });
-        mobPhoneNav.style.bottom = "-125px";
-        input.focus();
     }
 }
 
-window.addEventListener('scroll', pullOutOne);
-function pullOutOne() {
-    searchInputMobile.style.top = "-60px";
-    mobPhoneNav.style.bottom = "0";
-    inputSearchIn.blur();
-    input.blur();
-}
+// window.addEventListener('scroll', pullOutOne);
+// function pullOutOne() {
+//     searchInputMobile.style.top = "-60px";
+//     mobPhoneNav.style.bottom = "0";
+//     inputSearchIn.blur();
+//     input.blur();
+// }
 
 inputSearchIn.addEventListener('blur', pullOutTwo);
 function pullOutTwo() {

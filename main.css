@@ -1707,7 +1707,7 @@ nav.mob-phone-nav {
     z-index: 999;
     width: 100%;
     height: fit-content;
-    transition: .3s 0.3s;
+    transition: .3s;
 }
 
 .navigation {
@@ -1848,7 +1848,7 @@ section.search-input-mobile {
     position: fixed;
     z-index: 1000;
     top: -60px;
-    transition: 0.3s 0.3s;
+    transition: 0.3s;
 }
 
 section .search-box-mob {
