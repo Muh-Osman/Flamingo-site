@@ -203,13 +203,13 @@ function pullIn() {
 }
 
 // It cannot be used because of the automatic scrolling when the mobile keyboard appears
-// window.addEventListener('scroll', pullOutOne);
-// function pullOutOne() {
-//     searchInputMobile.style.top = "-60px";
-//     mobPhoneNav.style.bottom = "0";
-//     inputSearchIn.blur();
-//     input.blur();
-// }
+window.addEventListener('touchmove', pullOutOne);
+function pullOutOne() {
+    searchInputMobile.style.top = "-60px";
+    mobPhoneNav.style.bottom = "0";
+    inputSearchIn.blur();
+    input.blur();
+}
 
 // on blur => Reshow mobile navbar & hide float search bar
 inputSearchIn.addEventListener('blur', pullOutTwo);
