@@ -229,10 +229,3 @@ input.addEventListener('focus', pullOutFour);
 function pullOutFour() {
     mobPhoneNav.style.bottom = "-125px";
 }
-
-// hide float search bar if scrolling to top
-window.onscroll = () => {
-    if (window.scrollY < 122) {
-        searchInputMobile.style.top = "-60px";
-    }
-}
