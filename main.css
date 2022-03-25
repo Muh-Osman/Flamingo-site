@@ -35,9 +35,8 @@ body {
     --clr-border-rent-btn-hover: #fff;
     --clr-rent-btn-icon: #fff;
     --clr-rent-btn-icon-hover: #000;
-    --clr-background-mob-navbar: #FF0045;
+    --clr-background-mob-navbar: rgba(255, 0, 69, 0.8);
     --clr-indicat-border: #fff;
-
 
 
     
@@ -86,7 +85,7 @@ body {
     --clr-border-rent-btn-hover: #8b12fc;
     --clr-rent-btn-icon: #FF0045;
     --clr-rent-btn-icon-hover: #fff;
-    --clr-background-mob-navbar: #292929;
+    --clr-background-mob-navbar: rgb(41, 41, 41, 0.8);
     --clr-indicat-border: #121212;
 
 
@@ -1719,6 +1718,7 @@ nav.mob-phone-nav {
     position: relative;
     border-radius: 10px 10px 0 0;
     background-color: var(--clr-background-mob-navbar);
+    backdrop-filter: saturate(180%) blur(20px);
 }
 
 .navigation ul {
