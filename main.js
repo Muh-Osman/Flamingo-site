@@ -194,9 +194,29 @@ function pullIn() {
         mobPhoneNav.style.bottom = "-125px";
         input.focus();
     }
-
-
 }
+
+window.addEventListener('scroll', pullOutOne);
+function pullOutOne() {
+    searchInputMobile.style.top = "-60px";
+    mobPhoneNav.style.bottom = "0";
+    inputSearchIn.blur();
+    input.blur();
+}
+
+inputSearchIn.addEventListener('blur', pullOutTwo);
+function pullOutTwo() {
+    searchInputMobile.style.top = "-60px";
+    mobPhoneNav.style.bottom = "0";
+}
+
+input.addEventListener('blur', pullOutThree);
+function pullOutThree() {
+    searchInputMobile.style.top = "-60px";
+    mobPhoneNav.style.bottom = "0";
+}
+
+
 
 
 // window.onscroll = () => {
