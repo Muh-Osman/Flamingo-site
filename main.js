@@ -212,8 +212,12 @@ function pullOutTwo() {
 
 input.addEventListener('blur', pullOutThree);
 function pullOutThree() {
-    searchInputMobile.style.top = "-60px";
     mobPhoneNav.style.bottom = "0";
+}
+
+input.addEventListener('focus', pullOutFour);
+function pullOutFour() {
+    mobPhoneNav.style.bottom = "-125px";
 }
 
 
