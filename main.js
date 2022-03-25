@@ -178,17 +178,21 @@ let searchInputMobile = document.querySelector('.search-input-mobile');
 let searchInMobNav = document.querySelector('.search-in-mob-nav');
 let inputSearchIn = document.querySelector('.input-search-in');
 let searchIconNavMobLink = document.querySelector('.search-icon-nav-mob-link');
+let searchBoxMob = document.querySelector('.search-box-mob');
 
-// searchIconNavMobLink.preventDefault();
 
 searchInMobNav.addEventListener('click', pullIn);
 
 function pullIn() {
+    // if you are not in top of site => Show float search bar & hide Mobile Navbar
     if (window.scrollY >= 122) {
         mobPhoneNav.style.bottom = "-125px";
         searchInputMobile.style.top = "12px";
         inputSearchIn.focus();
+        searchBoxMob.style.outline = "var(--search-input-outline)";
+
     } else {
+        // Focus on orginal search bar & hide Mobile Navbar
         mobPhoneNav.style.bottom = "-125px";
         input.focus();
         window.scrollTo({
@@ -198,6 +202,7 @@ function pullIn() {
     }
 }
 
+// It cannot be used because of the automatic scrolling when the mobile keyboard appears
 // window.addEventListener('scroll', pullOutOne);
 // function pullOutOne() {
 //     searchInputMobile.style.top = "-60px";
@@ -206,29 +211,28 @@ function pullIn() {
 //     input.blur();
 // }
 
+// on blur => Reshow mobile navbar & hide float search bar
 inputSearchIn.addEventListener('blur', pullOutTwo);
 function pullOutTwo() {
     searchInputMobile.style.top = "-60px";
     mobPhoneNav.style.bottom = "0";
 }
 
+// on blur => Reshow mobile navbar
 input.addEventListener('blur', pullOutThree);
 function pullOutThree() {
     mobPhoneNav.style.bottom = "0";
 }
 
+// on focus => hide mobile navbar
 input.addEventListener('focus', pullOutFour);
 function pullOutFour() {
     mobPhoneNav.style.bottom = "-125px";
 }
 
-
-
-
-// window.onscroll = () => {
-//   window.scrollY >= 600
-//     ? (btn.style.display = "block")
-//     : (btn.style.display = "none");
-// };
-
-
+// hide float search bar if scrolling to top
+window.onscroll = () => {
+    if (window.scrollY < 122) {
+        searchInputMobile.style.top = "-60px";
+    }
+}
