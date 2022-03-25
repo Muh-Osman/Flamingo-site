@@ -168,3 +168,5 @@ function activeLink(){
 }
 list.forEach((item) =>
 item.addEventListener('click', activeLink));
+
+// Mobile Navbar when click on search icon
