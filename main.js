@@ -169,4 +169,21 @@ function activeLink(){
 list.forEach((item) =>
 item.addEventListener('click', activeLink));
 
+
+
+
 // Mobile Navbar when click on search icon
+let mobPhoneNav = document.querySelector('.mob-phone-nav');
+let searchInputMobile = document.querySelector('.search-input-mobile');
+let searchInMobNav = document.querySelector('.search-in-mob-nav');
+let inputSearchIn = document.querySelector('.input-search-in');
+
+
+searchInMobNav.addEventListener('click', pullIn);
+
+function pullIn() {
+    mobPhoneNav.style.bottom = "-125px";
+    searchInputMobile.style.top = "12px";
+
+
+}
