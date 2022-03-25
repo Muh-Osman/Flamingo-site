@@ -783,6 +783,9 @@ section nav a.rent-btn-icon svg:hover {
     nav.mob-phone-nav {
         display: flex !important;
     }
+    section.search-input-mobile {
+        display:block !important;
+    }
 }
 
 /* Start Gallery */
@@ -1699,7 +1702,7 @@ animation: shake 0.2s;
 
 /* Mobile Navbar */
 nav.mob-phone-nav {
-    display: none; /* display flex in media query */
+    display: none; /* display flex in media query 768px */
     align-items: center;
     justify-content: center;
     position: fixed;
@@ -1843,6 +1846,7 @@ nav.mob-phone-nav {
 
 /* Search input for mobile */
 section.search-input-mobile {
+    display: none; /* display block in media query 768px */
     width: 100%;
     padding: 0 12px;
     position: fixed;
