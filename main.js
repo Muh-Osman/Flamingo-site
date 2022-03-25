@@ -182,8 +182,27 @@ let inputSearchIn = document.querySelector('.input-search-in');
 searchInMobNav.addEventListener('click', pullIn);
 
 function pullIn() {
-    mobPhoneNav.style.bottom = "-125px";
-    searchInputMobile.style.top = "12px";
+    if (window.scrollY >= 122) {
+        mobPhoneNav.style.bottom = "-125px";
+        searchInputMobile.style.top = "12px";
+        inputSearchIn.focus();
+    } else {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+        mobPhoneNav.style.bottom = "-125px";
+        input.focus();
+    }
 
 
 }
+
+
+// window.onscroll = () => {
+//   window.scrollY >= 600
+//     ? (btn.style.display = "block")
+//     : (btn.style.display = "none");
+// };
+
+
