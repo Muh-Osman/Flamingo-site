@@ -1918,7 +1918,7 @@ section .search-box-mob .search-icon:hover svg {
 section.cat-section-under-nav {
     display: none;     /* display flex in media query 768px */
     align-items: center;
-    width: 100%;
+    width: 100vw;
     height: 70px;
     position: fixed;
     z-index: 1001;
@@ -1929,8 +1929,24 @@ section.cat-section-under-nav {
 }
 
 section div.cat-sec-under-nav-box {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    width: 100vw;
+    padding-left: 12px;
+
+    display: grid;
+    gap: 12px;
+    grid-auto-flow: column;
+    grid-auto-columns: 19.8%;
+
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+section div.cat-sec-under-nav-box::-webkit-scrollbar {
+    display: none;
 }
