@@ -184,9 +184,10 @@ let searchBoxMob = document.querySelector('.search-box-mob');
 searchInMobNav.addEventListener('click', pullIn);
 
 function pullIn() {
-    // if you are not in top of site => Show float search bar & hide Mobile Navbar
+    // if you are NOT in top of site => Show float search bar & hide Mobile Navbar & hide category shelve if shown
     if (window.scrollY >= 122) {
         mobPhoneNav.style.bottom = "-125px";
+        CatSectionUnderNav.style.bottom = "-70px";
         searchInputMobile.style.top = "12px";
         inputSearchIn.focus();
         searchBoxMob.style.outline = "var(--search-input-outline)";
@@ -203,13 +204,35 @@ function pullIn() {
 }
 
 // on scroll mobile => blur & hide the input then show mobile navbar
+
+
+
 window.addEventListener('touchmove', pullOutOne);
+
 function pullOutOne() {
-    searchInputMobile.style.top = "-60px";
-    mobPhoneNav.style.bottom = "0";
-    inputSearchIn.blur();
-    input.blur();
+
+    if (input === document.activeElement || inputSearchIn === document.activeElement) {
+
+        searchInputMobile.style.top = "-60px";
+        mobPhoneNav.style.bottom = "0";
+        CatSectionUnderNav.style.bottom = "-70px";
+        inputSearchIn.blur();
+        input.blur();
+        
+    } else {
+    console.log('Hi');
+    }
+
 }
+
+
+
+
+
+
+
+
+
 
 // on blur => Reshow mobile navbar & hide float search bar
 inputSearchIn.addEventListener('blur', pullOutTwo);
@@ -224,10 +247,11 @@ function pullOutThree() {
     mobPhoneNav.style.bottom = "0";
 }
 
-// on focus => hide mobile navbar
+// on focus => hide mobile navbar & category shelve if shown
 input.addEventListener('focus', pullOutFour);
 function pullOutFour() {
     mobPhoneNav.style.bottom = "-125px";
+    CatSectionUnderNav.style.bottom = "-70px";
 }
 
 
