@@ -1910,3 +1910,21 @@ section .search-box-mob .search-icon:hover svg {
     color: var(--clr-svg-search-icon-hover);
 }
 
+
+/* Category shelve under mobile Navbar */
+section.cat-section-under-nav {
+    /* display: none; */
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    bottom: -70px;
+    background-color: var(--clr-background-mob-navbar);
+    backdrop-filter: saturate(180%) blur(20px);
+}
+
+section div.cat-sec-under-nav-box {
+    width: ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

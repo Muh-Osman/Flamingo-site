@@ -229,3 +229,17 @@ input.addEventListener('focus', pullOutFour);
 function pullOutFour() {
     mobPhoneNav.style.bottom = "-125px";
 }
+
+
+
+// Category shelve under mobile Navbar
+let categoryBtnInMobNav = document.querySelector('.category-btn-in-mob-nav');
+let CatSectionUnderNav = document.querySelector('.cat-section-under-nav');
+
+categoryBtnInMobNav.addEventListener('click', showCatShelve);
+function showCatShelve() {
+    mobPhoneNav.style.bottom = "70px";
+    CatSectionUnderNav.style.bottom = "0";
+
+
+}
