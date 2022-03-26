@@ -786,6 +786,9 @@ section nav a.rent-btn-icon svg:hover {
     section.search-input-mobile {
         display:block !important;
     }
+    section.cat-section-under-nav {
+        display: flex !important;
+    }
 }
 
 /* Start Gallery */
@@ -1865,7 +1868,7 @@ section .search-box-mob {
     border-radius: 24px;
     background-color: var(--clr-input-background);
     box-shadow: #00000021 0px 2px 5px, #0000000d 0px 0px 3px;
-    transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    transition: box-shadow 0.2s;
 }
 
 section .search-box-mob:hover {
@@ -1913,18 +1916,21 @@ section .search-box-mob .search-icon:hover svg {
 
 /* Category shelve under mobile Navbar */
 section.cat-section-under-nav {
-    /* display: none; */
+    display: none;     /* display flex in media query 768px */
+    align-items: center;
     width: 100%;
     height: 70px;
-    position: absolute;
+    position: fixed;
+    z-index: 1001;
     bottom: -70px;
     background-color: var(--clr-background-mob-navbar);
     backdrop-filter: saturate(180%) blur(20px);
+    transition: .3s;
 }
 
 section div.cat-sec-under-nav-box {
-    width: ;
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }

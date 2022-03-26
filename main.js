@@ -237,9 +237,17 @@ let categoryBtnInMobNav = document.querySelector('.category-btn-in-mob-nav');
 let CatSectionUnderNav = document.querySelector('.cat-section-under-nav');
 
 categoryBtnInMobNav.addEventListener('click', showCatShelve);
-function showCatShelve() {
-    mobPhoneNav.style.bottom = "70px";
-    CatSectionUnderNav.style.bottom = "0";
 
+function showCatShelve() {
+
+    if (CatSectionUnderNav.style.bottom < "0") {
+        CatSectionUnderNav.style.bottom = "0";
+        mobPhoneNav.style.bottom = "70px";
+ 
+    } else {
+        CatSectionUnderNav.style.bottom = "-70px";
+        mobPhoneNav.style.bottom = "0";
+
+    }
 
 }
