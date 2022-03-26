@@ -202,7 +202,7 @@ function pullIn() {
     }
 }
 
-// It cannot be used because of the automatic scrolling when the mobile keyboard appears
+// on scroll mobile => blur & hide the input then show mobile navbar
 window.addEventListener('touchmove', pullOutOne);
 function pullOutOne() {
     searchInputMobile.style.top = "-60px";

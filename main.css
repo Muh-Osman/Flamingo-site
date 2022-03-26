@@ -1902,22 +1902,8 @@ section form.search-mob-form input::placeholder {
     color: var(--clr-placeholder);
 }
 
-section form.search-mob-form input:focus::placeholder {
-    transform: translateX(-75px);
-    transition: .2s;
-}
-
-section form.search-mob-form input:not(:focus)::placeholder {
-    transform: translateX(0px);
-    transition: .2s;
-}
-
 section .search-box-mob .search-icon svg {
     color: var(--clr-svg-search-icon);
-}
-
-section .search-box-mob .search-icon {
-    cursor: pointer;
 }
 
 section .search-box-mob .search-icon:hover svg {
