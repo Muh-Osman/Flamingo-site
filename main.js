@@ -203,9 +203,9 @@ function pullIn() {
     }
 }
 
+
+
 // on scroll mobile => blur & hide the input then show mobile navbar
-
-
 
 window.addEventListener('touchmove', pullOutOne);
 
@@ -218,19 +218,9 @@ function pullOutOne() {
         CatSectionUnderNav.style.bottom = "-70px";
         inputSearchIn.blur();
         input.blur();
-        
-    } else {
-    console.log('Hi');
     }
 
 }
-
-
-
-
-
-
-
 
 
 
@@ -275,3 +265,20 @@ function showCatShelve() {
     }
 
 }
+
+
+// nnnnnnnnnnnnnnnn
+// window.addEventListener('click', pulne);
+
+// if (categoryBtnInMobNav === document.activeElement) {
+
+    
+// } else {
+//     CatSectionUnderNav.style.bottom = "-70px";
+
+// }
+
+
+
+
+
