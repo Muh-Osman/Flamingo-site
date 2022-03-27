@@ -753,7 +753,7 @@ section nav a.rent-btn-icon svg:hover {
         width: 78px !important;
         border-radius: 0 15px 15px 0;
     }
-    section .gallery-section {
+    section .carousel-section {
         width: calc(100% - 78px) !important;
     }
     section nav .categories-box{
@@ -778,7 +778,7 @@ section nav a.rent-btn-icon svg:hover {
     section nav {
         display: none;
     }
-    section section.gallery-section {
+    section section.carousel-section {
         width: 100% !important;
     }
     nav.mob-phone-nav {
@@ -789,20 +789,25 @@ section nav a.rent-btn-icon svg:hover {
     }
 }
 
-/* Start Gallery */
-section .gallery-section {
+/* Start Carousel */
+section .carousel-section {
     padding: 0 12px;
     width: 81.5%
 }
 
-section .gallery-section .img-box {
+section .carousel-section .img-box {
     margin-bottom: 12px;
     user-select: none;
+    overflow: hidden;
 }
 
 .carousel-inner {
     border-radius: 10px;
-    border: 3px solid #8a12fc;
+    height: 300px;
+}
+
+.carousel-inner img {
+    /* object-fit: cover; */
 }
 
 .carousel-indicators {
@@ -824,18 +829,15 @@ section .gallery-section .img-box {
   left: 0;
   width: 0;
   height: 100%;
-  background: #8b12fc;
+  background-color: #FE1251;
   border-radius: inherit;
 }
 
 .carousel-indicators [data-bs-target] {
-    background-color: #fe1251;
+    background-color: #f882a2;
 }
+/* End Carousel */
 
-.carousel-indicators .active {
-    opacity: .5;
-}
-/* End Gallery */
 
 
 /* Start main section */
@@ -1804,30 +1806,6 @@ nav.mob-phone-nav {
     border: 4px solid var(--clr-indicat-border);
     background-color: #FF0045;
     transition: .3s;
-}
-
-.indicat::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: -20px;
-    width: 20px;
-    height: 30px;
-    border-top-right-radius: 20px;
-    box-shadow: 1px -10px 0 0 #fff;
-    clip-path: inset(0 0 50% 0);
-}
-
-.indicat::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: -20px;
-    width: 20px;
-    height: 30px;
-    border-top-left-radius: 20px;
-    box-shadow: -1px -10px 0 0 #fff;
-    clip-path: inset(0 0 50% 0);
 }
 
 .navigation ul li:nth-child(1).act ~ .indicat {
