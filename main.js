@@ -186,14 +186,14 @@ searchInMobNav.addEventListener('click', pullIn);
 function pullIn() {
     // if you are NOT in top of site => Show float search bar & hide Mobile Navbar & hide category shelve if shown
     if (window.scrollY >= 122) {
-        mobPhoneNav.style.bottom = "-20%";
+        mobPhoneNav.style.bottom = "-180px";
         searchInputMobile.style.top = "12px";
         inputSearchIn.focus();
         searchBoxMob.style.outline = "var(--search-input-outline)";
 
     } else {
         // Focus on orginal search bar & hide Mobile Navbar
-        mobPhoneNav.style.bottom = "-20%px";
+        mobPhoneNav.style.bottom = "-180px";
         input.focus();
         window.scrollTo({
             top: 0,
@@ -238,7 +238,7 @@ function pullOutThree() {
 // on focus => hide mobile navbar & category shelve if shown
 input.addEventListener('focus', pullOutFour);
 function pullOutFour() {
-    mobPhoneNav.style.bottom = "-20%";
+    mobPhoneNav.style.bottom = "-180px";
 }
 
 
