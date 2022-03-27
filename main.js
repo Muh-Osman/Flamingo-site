@@ -159,7 +159,7 @@ btnArray.forEach((ele) => {
 
 
 
-// Mobile Navbar
+// Mobile Navbar add active class
 const list = document.querySelectorAll('.list');
 function activeLink(){
     list.forEach((item) => 
@@ -186,15 +186,14 @@ searchInMobNav.addEventListener('click', pullIn);
 function pullIn() {
     // if you are NOT in top of site => Show float search bar & hide Mobile Navbar & hide category shelve if shown
     if (window.scrollY >= 122) {
-        mobPhoneNav.style.bottom = "-125px";
-        CatSectionUnderNav.style.bottom = "-70px";
+        mobPhoneNav.style.bottom = "-20%";
         searchInputMobile.style.top = "12px";
         inputSearchIn.focus();
         searchBoxMob.style.outline = "var(--search-input-outline)";
 
     } else {
         // Focus on orginal search bar & hide Mobile Navbar
-        mobPhoneNav.style.bottom = "-125px";
+        mobPhoneNav.style.bottom = "-20%px";
         input.focus();
         window.scrollTo({
             top: 0,
@@ -214,8 +213,7 @@ function pullOutOne() {
     if (input === document.activeElement || inputSearchIn === document.activeElement) {
 
         searchInputMobile.style.top = "-60px";
-        mobPhoneNav.style.bottom = "0";
-        CatSectionUnderNav.style.bottom = "-70px";
+        mobPhoneNav.style.bottom = "-70px";
         inputSearchIn.blur();
         input.blur();
     }
@@ -228,55 +226,39 @@ function pullOutOne() {
 inputSearchIn.addEventListener('blur', pullOutTwo);
 function pullOutTwo() {
     searchInputMobile.style.top = "-60px";
-    mobPhoneNav.style.bottom = "0";
+    mobPhoneNav.style.bottom = "-70px";
 }
 
 // on blur => Reshow mobile navbar
 input.addEventListener('blur', pullOutThree);
 function pullOutThree() {
-    mobPhoneNav.style.bottom = "0";
+    mobPhoneNav.style.bottom = "-70px";
 }
 
 // on focus => hide mobile navbar & category shelve if shown
 input.addEventListener('focus', pullOutFour);
 function pullOutFour() {
-    mobPhoneNav.style.bottom = "-125px";
-    CatSectionUnderNav.style.bottom = "-70px";
+    mobPhoneNav.style.bottom = "-20%";
 }
 
 
 
 // Category shelve under mobile Navbar
 let categoryBtnInMobNav = document.querySelector('.category-btn-in-mob-nav');
-let CatSectionUnderNav = document.querySelector('.cat-section-under-nav');
 
 categoryBtnInMobNav.addEventListener('click', showCatShelve);
 
 function showCatShelve() {
 
-    if (CatSectionUnderNav.style.bottom < "0") {
-        CatSectionUnderNav.style.bottom = "0";
-        mobPhoneNav.style.bottom = "70px";
+    if (mobPhoneNav.style.bottom < "0") {
+        mobPhoneNav.style.bottom = "0";
  
     } else {
-        CatSectionUnderNav.style.bottom = "-70px";
-        mobPhoneNav.style.bottom = "0";
-
+        mobPhoneNav.style.bottom == "0";
+        mobPhoneNav.style.bottom = "-70px";
     }
 
 }
-
-
-// nnnnnnnnnnnnnnnn
-// window.addEventListener('click', pulne);
-
-// if (categoryBtnInMobNav === document.activeElement) {
-
-    
-// } else {
-//     CatSectionUnderNav.style.bottom = "-70px";
-
-// }
 
 
 

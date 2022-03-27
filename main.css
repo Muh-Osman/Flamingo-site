@@ -787,9 +787,6 @@ section nav a.rent-btn-icon svg:hover {
     section.search-input-mobile {
         display:block !important;
     }
-    section.cat-section-under-nav {
-        display: flex !important;
-    }
 }
 
 /* Start Gallery */
@@ -1713,12 +1710,17 @@ nav.mob-phone-nav {
     display: none; /* display flex in media query 768px */
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     position: fixed;
-    bottom: 0;
+    bottom: -70px;
     z-index: 999;
     width: 100%;
-    height: fit-content;
+    height: 140px;
     transition: .3s;
+    border-radius: 10px 10px 0 0;
+    background-color: var(--clr-background-mob-navbar);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
 }
 
 .navigation {
@@ -1728,11 +1730,6 @@ nav.mob-phone-nav {
     width: 100%;
     height: 70px;
     position: relative;
-    border-radius: 10px 10px 0 0;
-    background-color: var(--clr-background-mob-navbar);
-    backdrop-filter: saturate(180%) blur(20px);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-
 }
 
 .navigation ul {
@@ -1921,30 +1918,19 @@ section .search-box-mob .search-icon:hover svg {
 }
 
 
+
+
 /* Category shelve under mobile Navbar */
-section.cat-section-under-nav {
-    display: none;     /* display flex in media query 768px */
-    align-items: center;
+nav div.cat-sec-under-nav-box {
     width: 100%;
     height: 70px;
-    position: fixed;
-    z-index: 1001;
-    bottom: -70px;
-    background-color: var(--clr-background-mob-navbar);
-    backdrop-filter: saturate(180%) blur(20px);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    transition: .3s;
-}
-
-section div.cat-sec-under-nav-box {
-    width: 100%;
     padding-left: 12px;
-
+    transition: .3s;
     display: grid;
     gap: 12px;
     grid-auto-flow: column;
+    align-content: center;
     grid-auto-columns: 19.8%;
-
     overflow-x: auto;
     overscroll-behavior-inline: contain;
 
@@ -1955,6 +1941,6 @@ section div.cat-sec-under-nav-box {
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
-section div.cat-sec-under-nav-box::-webkit-scrollbar {
+nav div.cat-sec-under-nav-box::-webkit-scrollbar {
     display: none;
 }
