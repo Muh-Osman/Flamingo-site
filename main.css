@@ -480,11 +480,12 @@ header .sign-up-box a.sign-up:active {
 
 /* Start nav bar */
 section.body-site {
-    padding-left: 0;
+    padding: 0;
 }
 
 section div.body-row {
-    margin-left: 0;
+    /* margin-left: 0; */
+    margin: 0;
 }
 
 section nav {
@@ -793,12 +794,12 @@ section nav a.rent-btn-icon svg:hover {
 
 /* Start Gallery */
 section .gallery-section {
-    padding: 0;
+    padding: 0 12px;
     width: 81.5%
 }
 
 section .gallery-section .img-box {
-    margin: 0  12px 12px;
+    margin-bottom: 12px;
     user-select: none;
 }
 
@@ -846,6 +847,10 @@ section .gallery-section .img-box {
     /* height: 100%; */
     /* width: 100%; */
     font-size: 20px;
+}
+
+.contin-product {
+    padding: 0;
 }
 
 .shelves {
@@ -1726,6 +1731,8 @@ nav.mob-phone-nav {
     border-radius: 10px 10px 0 0;
     background-color: var(--clr-background-mob-navbar);
     backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+
 }
 
 .navigation ul {
@@ -1918,18 +1925,19 @@ section .search-box-mob .search-icon:hover svg {
 section.cat-section-under-nav {
     display: none;     /* display flex in media query 768px */
     align-items: center;
-    width: 100vw;
+    width: 100%;
     height: 70px;
     position: fixed;
     z-index: 1001;
     bottom: -70px;
     background-color: var(--clr-background-mob-navbar);
     backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
     transition: .3s;
 }
 
 section div.cat-sec-under-nav-box {
-    width: 100vw;
+    width: 100%;
     padding-left: 12px;
 
     display: grid;
