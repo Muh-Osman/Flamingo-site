@@ -802,7 +802,7 @@ section .gallery-section .img-box {
 
 .carousel-inner {
     border-radius: 10px;
-    /* border: 3px solid #8a12fc; */
+    border: 3px solid #8a12fc;
 }
 
 .carousel-indicators {
@@ -1806,29 +1806,29 @@ nav.mob-phone-nav {
     transition: .3s;
 }
 
-/* .indicat::before {
+.indicat::before {
     content: "";
     position: absolute;
     top: 50%;
-    left: -22px;
+    left: -20px;
     width: 20px;
-    height: 20px;
-    background-color: transparent;
+    height: 30px;
     border-top-right-radius: 20px;
-    box-shadow: 1px -10px 0 0 #222327;
-} */
+    box-shadow: 1px -10px 0 0 #fff;
+    clip-path: inset(0 0 50% 0);
+}
 
-/* .indicat::after {
+.indicat::after {
     content: "";
     position: absolute;
     top: 50%;
-    right: -22px;
+    right: -20px;
     width: 20px;
-    height: 20px;
-    background-color: transparent;
+    height: 30px;
     border-top-left-radius: 20px;
-    box-shadow: -1px -10px 0 0 #222327;
-} */
+    box-shadow: -1px -10px 0 0 #fff;
+    clip-path: inset(0 0 50% 0);
+}
 
 .navigation ul li:nth-child(1).act ~ .indicat {
     transform: translateX(calc(70px * 0));
@@ -1922,6 +1922,7 @@ section .search-box-mob .search-icon:hover svg {
 
 /* Category shelve under mobile Navbar */
 nav div.cat-sec-under-nav-box {
+    display: none;
     width: 100%;
     height: 70px;
     padding-left: 12px;
