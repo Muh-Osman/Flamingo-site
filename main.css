@@ -37,6 +37,8 @@ body {
     --clr-rent-btn-icon-hover: #000;
     --clr-background-mob-navbar: rgba(255, 0, 69, 0.8);
     --clr-indicat-border: #fff;
+    --clr-svg-icon-in-cat-shelve-under-nav: #333;
+    --clr-svg-icon-in-cat-shelve-under-nav-hover: #fff;
 
 
     
@@ -87,6 +89,8 @@ body {
     --clr-rent-btn-icon-hover: #fff;
     --clr-background-mob-navbar: rgb(41, 41, 41, 0.8);
     --clr-indicat-border: #121212;
+    --clr-svg-icon-in-cat-shelve-under-nav: #0a80fe;
+    --clr-svg-icon-in-cat-shelve-under-nav-hover: #FF0045;
 
 
 
@@ -786,6 +790,9 @@ section nav a.rent-btn-icon svg:hover {
     }
     section.search-input-mobile {
         display:block !important;
+    }
+    nav div.cat-sec-under-nav-box {
+        display: grid !important;
     }
 }
 
@@ -1896,17 +1903,14 @@ section .search-box-mob .search-icon:hover svg {
 }
 
 
-
-
 /* Category shelve under mobile Navbar */
 nav div.cat-sec-under-nav-box {
-    display: none;
+    display: none; /* display grid in media query 768px*/
     width: 100%;
     height: 70px;
-    padding-left: 12px;
     transition: .3s;
-    display: grid;
-    gap: 12px;
+    align-items: center;
+    justify-items: center;
     grid-auto-flow: column;
     align-content: center;
     grid-auto-columns: 19.8%;
@@ -1919,7 +1923,27 @@ nav div.cat-sec-under-nav-box {
     
 }
 
+.cat-sec-under-nav-box > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+}
+
+
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 nav div.cat-sec-under-nav-box::-webkit-scrollbar {
     display: none;
+}
+
+nav.mob-phone-nav .cat-sec-under-nav-box svg {
+    color: var(--clr-svg-icon-in-cat-shelve-under-nav); /* fill & stroke currentColor */
+}
+
+nav.mob-phone-nav .cat-sec-under-nav-box > div:hover svg {
+    color: var(--clr-svg-icon-in-cat-shelve-under-nav-hover);
+    transform: scale(1.1);
+    transition: .3s;
 }
