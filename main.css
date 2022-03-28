@@ -785,6 +785,10 @@ section nav a.rent-btn-icon svg:hover {
     section section.carousel-section {
         width: 100% !important;
     }
+    section .carousel-inner img {
+        max-height: 40vw;
+        min-height: 150px;
+    }
     nav.mob-phone-nav {
         display: flex !important;
     }
@@ -807,25 +811,15 @@ section .carousel-section .img-box {
     user-select: none;
 }
 
-
-
-
-
-
-.carousel-inner {
+section .carousel-inner {
     border-radius: 10px;
 }
 
-.carousel-inner img {
+section .carousel-inner img {
     height: 300px;
     object-fit: cover;
     background-position: center;
 }
-
-
-
-
-
 
 .carousel-indicators {
     margin-bottom: 0.6rem;
