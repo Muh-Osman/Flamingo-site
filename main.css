@@ -806,7 +806,7 @@ section .carousel-section {
     width: 81.5%
 }
 
-section .carousel-section .img-box {
+main section .carousel-section .img-box {
     margin-bottom: 12px;
     user-select: none;
 }
@@ -870,7 +870,7 @@ section .carousel-indicators [data-bs-target] {
 
 
 /* Start Shelves section */
-.main-box {
+.shelves-box {
     margin: 0;
     /* height: 100%; */
     /* width: 100%; */
