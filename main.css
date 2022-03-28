@@ -65,7 +65,7 @@ body {
     --clr-input-background: #292929;
     --clr-svg-search-icon: #fff;
     --clr-svg-search-icon-hover: #fff;
-    --search-input-outline: 1px solid #8b12fc;
+    --search-input-outline: 1px solid #0a80fe;
     --clr-login-background: transparent;
     --clr-login-background-hover: #fff;
     --clr-login-font-hover: #000;
@@ -84,7 +84,7 @@ body {
     --clr-background-rent-btn: #fff;
     --clr-rent-btn-hover: #fff;
     --clr-background-rent-btn-hover: var(--clr-shelves);
-    --clr-border-rent-btn-hover: #8b12fc;
+    --clr-border-rent-btn-hover: #0a80fe;
     --clr-rent-btn-icon: #FF0045;
     --clr-rent-btn-icon-hover: #fff;
     --clr-background-mob-navbar: rgb(41, 41, 41, 0.8);
@@ -821,7 +821,7 @@ section .carousel-inner img {
     background-position: center;
 }
 
-.btn-in-carousel-one {
+section .btn-in-carousel-one {
     position: absolute;
     bottom: 50px;
     left: 50px;
@@ -839,11 +839,11 @@ section .carousel-inner img {
     background-color: #FF0045;
 }
 
-.carousel-indicators {
+section .carousel-indicators {
     margin-bottom: 0.6rem;
 }
 
-.carousel-indicators [data-bs-target] {
+section .carousel-indicators [data-bs-target] {
   position: relative;
   width: 8%;
   height: 6px;
@@ -851,7 +851,7 @@ section .carousel-inner img {
   border-radius: 24px;
 }
 
-.carousel-indicators [data-bs-target] span {
+section .carousel-indicators [data-bs-target] span {
   content: "";
   position: absolute;
   top: 0;
@@ -862,14 +862,14 @@ section .carousel-inner img {
   border-radius: inherit;
 }
 
-.carousel-indicators [data-bs-target] {
+section .carousel-indicators [data-bs-target] {
     background-color: #f882a2;
 }
 /* End Carousel */
 
 
 
-/* Start main section */
+/* Start Shelves section */
 .main-box {
     margin: 0;
     /* height: 100%; */
