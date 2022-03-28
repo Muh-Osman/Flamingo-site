@@ -805,17 +805,27 @@ section .carousel-section {
 section .carousel-section .img-box {
     margin-bottom: 12px;
     user-select: none;
-    overflow: hidden;
 }
+
+
+
+
+
 
 .carousel-inner {
     border-radius: 10px;
-    height: 300px;
 }
 
 .carousel-inner img {
-    /* object-fit: cover; */
+    height: 300px;
+    object-fit: cover;
+    background-position: center;
 }
+
+
+
+
+
 
 .carousel-indicators {
     margin-bottom: 0.6rem;
