@@ -821,6 +821,24 @@ section .carousel-inner img {
     background-position: center;
 }
 
+.btn-in-carousel-one {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    width: 175px;
+    height: 50px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #FF0045;
+}
+
 .carousel-indicators {
     margin-bottom: 0.6rem;
 }
